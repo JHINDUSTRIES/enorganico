@@ -7,7 +7,7 @@
   display: inline-block;
   background: transparent; /* no pinta nada, todo lo hace ::before */
   cursor: pointer;
-  color: var(--enorganico-secondary-color);
+  color: var(--enorganico-primary-color);
 }
 
 /* Usamos solo ::before para las tres barras */
@@ -18,15 +18,15 @@
   left: 0;
   width: 100%;
   height: var(--enorganico-hamburguer-thickness);
-  background: var(--enorganico-secondary-color);
+  background: var(--enorganico-primary-color);
   border-radius: 2px;
   transform: translateY(-50%);
   transition: transform var(--enorganico-hamburguer-transition), box-shadow var(--enorganico-hamburguer-transition);
   
   /* Dos sombras = barra arriba + barra abajo */
   box-shadow:
-    0 calc(-1 * var(--enorganico-hamburguer-gap)) 0 0 var(--enorganico-secondary-color),
-    0 var(--enorganico-hamburguer-gap) 0 0 var(--enorganico-secondary-color);
+    0 calc(-1 * var(--enorganico-hamburguer-gap)) 0 0 var(--enorganico-primary-color),
+    0 var(--enorganico-hamburguer-gap) 0 0 var(--enorganico-primary-color);
 }
 
 /* Estado activo: convierte las 3 barras en una "X" */

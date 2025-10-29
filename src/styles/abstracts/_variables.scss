@@ -1,7 +1,8 @@
 // Colors
 $enorganico-primary-color:         #E0D4BB !default;
 $enorganico-secondary-color:       #693B00 !default;
-
+$enorganico-tertiary-color:        #031A18 !default;
+  
 $enroganico-high-accent-color:     #A4671F !default;
 $enroganico-middle-accent-color:   #D39B5E !default;
 $enorganico-low-accent-color:      #DCBA8C !default;
@@ -13,6 +14,7 @@ $enorganico-dark-color:            #000000 !default;
 :root {
   --enorganico-primary-color:         #E0D4BB;
   --enorganico-secondary-color:       #693B00;
+  --enorganico-tertiary-color:        #031A18;
 
   --enorganico-high-accent-color:     #A4671F;
   --enorganico-middle-accent-color:   #D39B5E;
