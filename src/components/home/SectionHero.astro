@@ -1,5 +1,8 @@
 ---
-import bgVideo2 from '../../assets/videos/bg-video-2.mp4';
+import bgVideo2_mp4 from '../../assets/videos/bg-video-2.mp4';
+import bgVideo2_webm from '../../assets/videos/bg-video-2.webm';
+import bgVideo2_avif from '../../assets/videos/bg-video-2.avif';
+import bgVideo2_mov from '../../assets/videos/bg-video-2.mov';
 ---
 
 <section id="hero" class="enorganico enorganico-hero">
@@ -7,14 +10,13 @@ import bgVideo2 from '../../assets/videos/bg-video-2.mp4';
     <div class="row">
       <div class="col-12 position-relative before:position-absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:w-full before:h-full before:bg-black/75">
         <picture>
-          <video autoplay muted loop class="enorganico-hero__video">
-            <source src={bgVideo2} type="video/mp4">
+          <video webkit-playsinline="" playsinline="" autoplay="" muted="" loop="" class="enorganico-hero__video">
+            <source src={bgVideo2_avif} type="video/avif">
+            <source src={bgVideo2_mp4} type="video/mp4">
+            <source src={bgVideo2_webm} type="video/webm">
+            <source src={bgVideo2_mov} type="video/mov">
           </video>
         </picture>
-        <div class="enorganico-hero__content text-start">
-          <h1 class="text-white text-2xl">Bienvenido a Enorganico</h1>
-          <p class="text-white ">El mejor cafe expresso de España</p>
-        </div>
       </div>
     </div>
   </div>
