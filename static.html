@@ -3,9 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video estatico para pruebas</title>
   </head>
   <body>
-    <video controls autoplay muted loop src="./src/assets/videos/bg-video-2.MP4"></video>
+    <video controls autoplay muted loop>
+      <source src="./src/assets/videos/bg-video-2.avif" type="video/avif">
+      <source src="./src/assets/videos/bg-video-2.mp4" type="video/mp4">
+      <source src="./src/assets/videos/bg-video-2.mov" type="video/mov">
+      <source src="./src/assets/videos/bg-video-2.webm" type="video/webm">
+    </video>
   </body>
 </html>
