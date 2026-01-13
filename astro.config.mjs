@@ -12,15 +12,7 @@ export default defineConfig({
     assetsInclude: ["**/*.mov", "**/*.mp4", "**/*.webm"],
   },
 
-  // SOLO PARA DESARROLLO ↓↓↓
-  devToolbar: {
-    enabled: false,
-  },
-
-  // Middleware para desarrollo
-  output: "static",
-
-  site: "https://camiicode.github.io",
+  site: "https://JHINDUSTRIES.github.io",
   base: "/enorganico",
   build: {
     assets: "assets",
