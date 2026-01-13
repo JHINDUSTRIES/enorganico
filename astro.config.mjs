@@ -1,6 +1,5 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
@@ -10,9 +9,17 @@ export default defineConfig({
     css: {
       postcss: {},
     },
-    // ESTA ES LA PARTE NUEVA ↓↓↓
-    assetsInclude: ["**/*.mov", "**/*.mp4", "**/*.webm", "**/*.avi", "**/*.mkv"],
+    assetsInclude: ["**/*.mov", "**/*.mp4", "**/*.webm"],
   },
+
+  // SOLO PARA DESARROLLO ↓↓↓
+  devToolbar: {
+    enabled: false,
+  },
+
+  // Middleware para desarrollo
+  output: "static",
+
   site: "https://camiicode.github.io",
   base: "/enorganico",
   build: {
