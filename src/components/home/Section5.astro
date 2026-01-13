@@ -1,283 +1,239 @@
+---
+// src/components/home/Section5.astro
+// @ts-nocheck
+---
+
 <section id="enorganico-our-coffees" class="s_pricelist_cafe o_colored_level pb104 o_cc o_cc2" data-oe-shape-data="{'shape':'html_builder/Bold/16','flip':[]}" data-snippet="s_pricelist_cafe" data-name="Lista de precios de café">
-				<style>
-                    #enorganico-our-coffees .container_pricelist_cafe {
-                        position: relative;
-                        .s_pricelist_cafe_col {
-                            z-index: 999;
-                        }
-                    }
-                    #enorganico-our-coffees .container_pricelist_cafe::before {
-                        content: "";
-                        position: absolute;
-                        top: 75%;
-                        left: 0;
-                        transform: translate(-15%, -75%);
-                        width: 60%;
-                        height: 75%;
-                        background-color: var(--enorganico-primary-color);
-                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125);
-                    }
-                    #enorganico-our-coffees .container_pricelist_cafe {
-                      position: relative;
-                    }
-                    #enorganico-our-coffees .container_pricelist_cafe::before {
-                      content: "";
-                      position: absolute;
-                      top: 75%;
-                      left: 0;
-                      transform: translate(-15%, -75%);
-                      width: 60%;
-                      height: 75%;
-                      background-color: var(--enorganico-primary-color);
-                    }
-                    #enorganico-our-coffees .s_pricelist_cafe_item {
-                      cursor: pointer;
-                      padding: 12px 15px;
-                      transition: all 0.3s ease;
-                    }
-                    #enorganico-our-coffees .s_pricelist_cafe_item.active {
-                      outline: 2px solid var(--enorganico-secondary-color);
-                      outline-offset: 4px;
-                    }
-                    #enorganico-our-coffees .s_pricelist_cafe_item:hover {
-                      background-color: rgba(var(--enorganico-secondary-color-rgb, 255, 193, 7), 0.05);
-                    }
-                    #enorganico-our-coffees img[data-target-image-url] {
-                      transition: opacity 0.5s ease;
-                      max-height: 400px;
-                      object-fit: contain;
-                      width: 100%;
-                    }
-                  </style>
-				<div class="container container_pricelist_cafe">
-					<!-- Resto del HTML se mantiene igual -->
-					<div class="row">
-						<div class="s_pricelist_cafe_col col-lg-5 pt64 o_colored_level o_cc o_cc5" style="background-color: rgba(255, 255, 255, 0);">
-							<h6 style="color: var(--enorganico-secondary-color);">NUESTRO</h6>
-							<h1 style="font-size: 5rem; line-height: 4rem; font-weight: 900; color: var(--enorganico-secondary-color);">CAFE 
-								<br/> ESPRESSO
-							</h1>
-						</div>
-					</div>
-					<div class="row align-items-center">
-						<div class="s_pricelist_cafe_col col-lg-4 pb-5 o_cc o_cc5 s_col_no_resize o_colored_level" style="background-color: rgba(28, 27, 24, 0);">
-							<h3 class="h3-fs" style="color: var(--enorganico-secondary-color);">Entienda el Proceso</h3>
-							<p class="lead" style="color: var(--enorganico-secondary-color);">Tres formas de extraer carácter del café</p>
-							<ul class="list-unstyled my-3">
-								<li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1495-9c7cfffa/espresso-ristretto.webp">
-									<p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Ristretto</p>
-									<p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Más corto, más intenso.</p>
-									<p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Menos agua, mayor concentración. Perfil profundo, sedoso y con carácter marcado.</p>
-								</li>
-								<li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1494-3de78fbc/espresso-lungo.webp">
-									<p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Lungo</p>
-									<p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Más largo y suave.</p>
-									<p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Mayor cantidad de agua que resalta notas amargas y prolonga el sabor en boca.</p>
-								</li>
-								<li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1492-51fd3708/espresso-clasico.webp">
-									<p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Clásico</p>
-									<p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Equilibrado y aromático.</p>
-									<p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">La referencia del café espresso: cuerpo medio, acidez controlada y una crema natural que concentra el sabor.</p>
-								</li>
-							</ul>
-						</div>
-						<div class="s_pricelist_cafe_col col-lg-4 d-lg-block o_snippet_mobile_invisible s_col_no_resize o_colored_level" data-invisible="1">
-							<img class="img img-fluid d-block mx-auto" data-target-image-url="" src="/web/image/1495-9c7cfffa/espresso-ristretto.webp" alt="" loading="lazy" data-mimetype="image/png"/>
-						</div>
-						<div class="s_pricelist_cafe_col col-lg-4 py-5 o_cc s_col_no_resize o_colored_level o_cc2">
-							<ul class="list-unstyled my-3">
-								<li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1493-7ed92895/linea-andino.webp">
-									<p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea 
-                              
-										<u>Andino</u>
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Origen:</strong> Colombia
-                            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Tueste:</strong> Medio
-                            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Perfil:</strong> Balanceado, notas a chocolate y caramelo
-                            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Ideal para:</strong> Espresso Ristretto
-                            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">Un café noble y versátil, pensado para quienes buscan equilibrio y suavidad sin perder carácter.</p>
-								</li>
-								<li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1496-a4a9df4b/linea-athiopia.webp">
-									<p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea 
-              
-										<u>Ethiopia</u>
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Origen:</strong> África Oriental
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Tueste:</strong> Medio–claro
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Perfil:</strong> Redondo, baja acidez, notas dulces
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Ideal para:</strong> Espresso clásico y lungo, donde sus matices se expresan con claridad.
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">El origen del café, en su forma más pura.</p>
-								</li>
-								<li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1497-2c65102c/linea-cusco.webp">
-									<p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea 
-              
-										<u>Cusco</u>
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Origen:</strong> Perú
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Tueste:</strong> Medio–oscuro
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Perfil:</strong> Intenso, cuerpo alto, notas tostadas
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">
-										<strong>Ideal para:</strong> Espresso clásico y Ristretto
-            
-									</p>
-									<p class="s_pricelist_cafe_item_description d-block text-muted o_small">Granos cultivados en altura que ofrecen profundidad y fuerza. Perfecto para extracciones cortas y potentes.</p>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<script>
-//
-(function() {
-    'use strict';
-    
-    // Esperar a que Odoo cargue el DOM
-    if (typeof $ === 'undefined') {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
-        } else {
-            setTimeout(init, 1000);
-        }
-    } else {
-        $(document).ready(init);
+  <style>
+    #enorganico-our-coffees .container_pricelist_cafe {
+      position: relative;
+      .s_pricelist_cafe_col {
+        z-index: 999;
+      }
     }
-    
-    function init() {
-        var section = document.getElementById('enorganico-our-coffees');
+    #enorganico-our-coffees .container_pricelist_cafe::before {
+      content: "";
+      position: absolute;
+      top: 75%;
+      left: 0;
+      transform: translate(-15%, -75%);
+      width: 60%;
+      height: 75%;
+      background-color: var(--enorganico-primary-color);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125);
+    }
+    #enorganico-our-coffees .container_pricelist_cafe {
+      position: relative;
+    }
+    #enorganico-our-coffees .container_pricelist_cafe::before {
+      content: "";
+      position: absolute;
+      top: 75%;
+      left: 0;
+      transform: translate(-15%, -75%);
+      width: 60%;
+      height: 75%;
+      background-color: var(--enorganico-primary-color);
+    }
+    #enorganico-our-coffees .s_pricelist_cafe_item {
+      cursor: pointer;
+      padding: 12px 15px;
+      transition: all 0.3s ease;
+    }
+    #enorganico-our-coffees .s_pricelist_cafe_item.active {
+      outline: 2px solid var(--enorganico-secondary-color);
+      outline-offset: 4px;
+    }
+    #enorganico-our-coffees .s_pricelist_cafe_item:hover {
+      background-color: rgba(var(--enorganico-secondary-color-rgb, 255, 193, 7), 0.05);
+    }
+    #enorganico-our-coffees img[data-target-image-url] {
+      transition: opacity 0.5s ease;
+      max-height: 400px;
+      object-fit: contain;
+      width: 100%;
+    }
+  </style>
+  <div class="container container_pricelist_cafe">
+    <!-- Resto del HTML se mantiene igual -->
+    <div class="row">
+      <div class="s_pricelist_cafe_col col-lg-5 pt64 o_colored_level o_cc o_cc5" style="background-color: rgba(255, 255, 255, 0);">
+        <h6 style="color: var(--enorganico-secondary-color);">NUESTRO</h6>
+        <h1 style="font-size: 5rem; line-height: 4rem; font-weight: 900; color: var(--enorganico-secondary-color);">CAFE <br /> ESPRESSO</h1>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="s_pricelist_cafe_col col-lg-4 pb-5 o_cc o_cc5 s_col_no_resize o_colored_level" style="background-color: rgba(28, 27, 24, 0);">
+        <h3 class="h3-fs" style="color: var(--enorganico-secondary-color);">Entienda el Proceso</h3>
+        <p class="lead" style="color: var(--enorganico-secondary-color);">Tres formas de extraer carácter del café</p>
+        <ul class="list-unstyled my-3">
+          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1495-9c7cfffa/espresso-ristretto.webp">
+            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Ristretto</p>
+            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Más corto, más intenso.</p>
+            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Menos agua, mayor concentración. Perfil profundo, sedoso y con carácter marcado.</p>
+          </li>
+          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1494-3de78fbc/espresso-lungo.webp">
+            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Lungo</p>
+            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Más largo y suave.</p>
+            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Mayor cantidad de agua que resalta notas amargas y prolonga el sabor en boca.</p>
+          </li>
+          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1492-51fd3708/espresso-clasico.webp">
+            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Clásico</p>
+            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Equilibrado y aromático.</p>
+            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">La referencia del café espresso: cuerpo medio, acidez controlada y una crema natural que concentra el sabor.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="s_pricelist_cafe_col col-lg-4 d-lg-block o_snippet_mobile_invisible s_col_no_resize o_colored_level" data-invisible="1">
+        <img class="img img-fluid d-block mx-auto" data-target-image-url="" src="/web/image/1495-9c7cfffa/espresso-ristretto.webp" alt="" loading="lazy" data-mimetype="image/png" />
+      </div>
+      <div class="s_pricelist_cafe_col col-lg-4 py-5 o_cc s_col_no_resize o_colored_level o_cc2">
+        <ul class="list-unstyled my-3">
+          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1493-7ed92895/linea-andino.webp">
+            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea <u>Andino</u></p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Origen:</strong> Colombia</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Tueste:</strong> Medio</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Perfil:</strong> Balanceado, notas a chocolate y caramelo</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Ideal para:</strong> Espresso Ristretto</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small">Un café noble y versátil, pensado para quienes buscan equilibrio y suavidad sin perder carácter.</p>
+          </li>
+          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1496-a4a9df4b/linea-athiopia.webp">
+            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea <u>Ethiopia</u></p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Origen:</strong> África Oriental</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Tueste:</strong> Medio–claro</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Perfil:</strong> Redondo, baja acidez, notas dulces</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Ideal para:</strong> Espresso clásico y lungo, donde sus matices se expresan con claridad.</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small">El origen del café, en su forma más pura.</p>
+          </li>
+          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1497-2c65102c/linea-cusco.webp">
+            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea <u>Cusco</u></p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Origen:</strong> Perú</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Tueste:</strong> Medio–oscuro</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Perfil:</strong> Intenso, cuerpo alto, notas tostadas</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Ideal para:</strong> Espresso clásico y Ristretto</p>
+            <p class="s_pricelist_cafe_item_description d-block text-muted o_small">Granos cultivados en altura que ofrecen profundidad y fuerza. Perfecto para extracciones cortas y potentes.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script is:inline>
+    (function () {
+      "use strict";
+
+      // Esperar a que Odoo cargue el DOM
+      if (typeof $ === "undefined") {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", init);
+        } else {
+          setTimeout(init, 1000);
+        }
+      } else {
+        $(document).ready(init);
+      }
+
+      function init() {
+        var section = document.getElementById("enorganico-our-coffees");
         if (!section) {
-            setTimeout(init, 500);
-            return;
+          setTimeout(init, 500);
+          return;
         }
-        
-        var coffeeItems = section.querySelectorAll('.s_pricelist_cafe_item');
-        var targetImage = section.querySelector('img[data-target-image-url]');
-        
+
+        var coffeeItems = section.querySelectorAll(".s_pricelist_cafe_item");
+        var targetImage = section.querySelector("img[data-target-image-url]");
+
         if (!targetImage || coffeeItems.length === 0) {
-            return;
+          return;
         }
-        
+
         // Variables de control
         var currentIndex = 0;
         var autoRotateInterval;
         var isUserInteracting = false;
         var rotationTime = 5000; // 5 segundos
-        
+
         // Función para activar un item
         function activateItem(index) {
-            // Remover clase active de todos
-            for (var i = 0; i &lt; coffeeItems.length; i++) {
-                coffeeItems[i].classList.remove('active');
+          // Remover clase active de todos
+          for (var i = 0; i < coffeeItems.length; i++) {
+            coffeeItems[i].classList.remove("active");
+          }
+
+          // Activar el item seleccionado
+          if (coffeeItems[index]) {
+            coffeeItems[index].classList.add("active");
+
+            // Cambiar imagen
+            var imageUrl = coffeeItems[index].getAttribute("data-image");
+            if (imageUrl && imageUrl !== targetImage.src) {
+              targetImage.style.opacity = "0.5";
+              setTimeout(function () {
+                targetImage.src = imageUrl;
+                targetImage.style.opacity = "1";
+              }, 300);
             }
-            
-            // Activar el item seleccionado
-            if (coffeeItems[index]) {
-                coffeeItems[index].classList.add('active');
-                
-                // Cambiar imagen
-                var imageUrl = coffeeItems[index].getAttribute('data-image');
-                if (imageUrl &amp;&amp; imageUrl !== targetImage.src) {
-                    targetImage.style.opacity = '0.5';
-                    setTimeout(function() {
-                        targetImage.src = imageUrl;
-                        targetImage.style.opacity = '1';
-                    }, 300);
-                }
-            }
-            
-            currentIndex = index;
+          }
+
+          currentIndex = index;
         }
-        
+
         // Función para rotación automática
         function startAutoRotation() {
-            if (autoRotateInterval) {
-                clearInterval(autoRotateInterval);
-            }
-            
-            if (!isUserInteracting) {
-                autoRotateInterval = setInterval(function() {
-                    var newIndex;
-                    do {
-                        newIndex = Math.floor(Math.random() * coffeeItems.length);
-                    } while (newIndex === currentIndex &amp;&amp; coffeeItems.length &gt; 1);
-                    
-                    activateItem(newIndex);
-                }, rotationTime);
-            }
+          if (autoRotateInterval) {
+            clearInterval(autoRotateInterval);
+          }
+
+          if (!isUserInteracting) {
+            autoRotateInterval = setInterval(function () {
+              var newIndex;
+              do {
+                newIndex = Math.floor(Math.random() * coffeeItems.length);
+              } while (newIndex === currentIndex && coffeeItems.length > 1);
+
+              activateItem(newIndex);
+            }, rotationTime);
+          }
         }
-        
+
         // Añadir eventos a los items
-        for (var i = 0; i &lt; coffeeItems.length; i++) {
-            (function(index) {
-                // Mouse enter
-                coffeeItems[index].addEventListener('mouseenter', function() {
-                    isUserInteracting = true;
-                    clearInterval(autoRotateInterval);
-                    activateItem(index);
-                });
-                
-                // Mouse leave
-                coffeeItems[index].addEventListener('mouseleave', function() {
-                    isUserInteracting = false;
-                    setTimeout(startAutoRotation, 3000);
-                });
-                
-                // Touch para móviles
-                coffeeItems[index].addEventListener('touchstart', function(e) {
-                    e.preventDefault();
-                    isUserInteracting = true;
-                    clearInterval(autoRotateInterval);
-                    activateItem(index);
-                });
-            })(i);
+        for (var i = 0; i < coffeeItems.length; i++) {
+          (function (index) {
+            // Mouse enter
+            coffeeItems[index].addEventListener("mouseenter", function () {
+              isUserInteracting = true;
+              clearInterval(autoRotateInterval);
+              activateItem(index);
+            });
+
+            // Mouse leave
+            coffeeItems[index].addEventListener("mouseleave", function () {
+              isUserInteracting = false;
+              setTimeout(startAutoRotation, 3000);
+            });
+
+            // Touch para móviles
+            coffeeItems[index].addEventListener("touchstart", function (e) {
+              e.preventDefault();
+              isUserInteracting = true;
+              clearInterval(autoRotateInterval);
+              activateItem(index);
+            });
+          })(i);
         }
-        
+
         // Inicializar
-        setTimeout(function() {
-            activateItem(0);
-            startAutoRotation();
+        setTimeout(function () {
+          activateItem(0);
+          startAutoRotation();
         }, 1500);
-        
+
         // Limpiar al salir
-        window.addEventListener('beforeunload', function() {
-            if (autoRotateInterval) {
-                clearInterval(autoRotateInterval);
-            }
+        window.addEventListener("beforeunload", function () {
+          if (autoRotateInterval) {
+            clearInterval(autoRotateInterval);
+          }
         });
-    }
-})();
-//
-</script>
-			</section>
+      }
+    })();
+  </script>
+</section>

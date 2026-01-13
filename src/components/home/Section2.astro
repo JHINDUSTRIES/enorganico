@@ -21,83 +21,83 @@
             </div>
             <div class="enorganico-slider__track--item item-slider">
               <span>Despierta tus sentidos</span>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>2x1 en espresso por la mañana</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>2x1 en espresso por la mañana</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>Del grano a tu taza</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>Mas cafe, una experiencia</span>
+              <div class="enorganico-slider__track--item item-slider">
+                <span>2x1 en espresso por la mañana</span>
+              </div>
+              <div class="enorganico-slider__track--item item-slider">
+                <span>2x1 en espresso por la mañana</span>
+              </div>
+              <div class="enorganico-slider__track--item item-slider">
+                <span>Del grano a tu taza</span>
+              </div>
+              <div class="enorganico-slider__track--item item-slider">
+                <span>Mas cafe, una experiencia</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<script is:inline>
-  const track = document.querySelector('.enorganico-slider__track');
-  const slides = Array.from(track.children);
+  <script is:inline>
+    const track = document.querySelector(".enorganico-slider__track");
+    const slides = Array.from(track.children);
 
-  slides.forEach(slide => {
-    const clone = slide.cloneNode(true);
-    track.appendChild(clone);
-  });
-</script>
+    slides.forEach((slide) => {
+      const clone = slide.cloneNode(true);
+      track.appendChild(clone);
+    });
+  </script>
 
-<style lang="scss">
-  .enorganico {
-    &#infinite-slider {
-      width: auto;
-      min-width: 100%;
-      overflow: hidden;
-    }
+  <style lang="scss">
+    .enorganico {
+      &#infinite-slider {
+        width: auto;
+        min-width: 100%;
+        overflow: hidden;
+      }
 
-    &-slider {
-      height: 50px;
-      display: flex;
-      align-items: center;
-      color: var(--enorganico-black-color);
-      background-color: var(--enorganico-primary-color);
-      font-size: 1.25rem;
-      font-weight: var(--enorganico-font-weight-medium);
-
-      &__track {
+      &-slider {
+        height: 50px;
         display: flex;
-        width: max-content;
-        animation: scroll 20s linear infinite;
+        align-items: center;
+        color: var(--enorganico-black-color);
+        background-color: var(--enorganico-primary-color);
+        font-size: 1.25rem;
+        font-weight: var(--enorganico-font-weight-medium);
 
-        .item-slider {
-          flex: 0 0 auto;
-          padding: 0 3rem;
-          position: relative;
+        &__track {
+          display: flex;
+          width: max-content;
+          animation: scroll 20s linear infinite;
 
-          &::before {
-            content: "·";
-            position: absolute;
-            top: -50%;
-            left: 0%;
-            transform: translateX(-50%, 50%);
-            font-size: 2rem;
-            font-weight: var(--enorganico-font-weight-black);
-          }
-        }
+          .item-slider {
+            flex: 0 0 auto;
+            padding: 0 3rem;
+            position: relative;
 
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
+            &::before {
+              content: "·";
+              position: absolute;
+              top: -50%;
+              left: 0%;
+              transform: translateX(-50%, 50%);
+              font-size: 2rem;
+              font-weight: var(--enorganico-font-weight-black);
+            }
           }
-          100% {
-            transform: translateX(-50%);
+
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
           }
-          
         }
       }
     }
-  }
-</style>
+  </style>
+</section>
