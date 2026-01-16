@@ -1,238 +1,176 @@
----
-// src/components/home/Section5.astro
-// @ts-nocheck
----
-
-<section id="enorganico-our-coffees" class="s_pricelist_cafe o_colored_level pb104 o_cc o_cc2" data-oe-shape-data="{'shape':'html_builder/Bold/16','flip':[]}" data-snippet="s_pricelist_cafe" data-name="Lista de precios de café">
-  <style>
-    #enorganico-our-coffees .container_pricelist_cafe {
-      position: relative;
-      .s_pricelist_cafe_col {
-        z-index: 999;
-      }
-    }
-    #enorganico-our-coffees .container_pricelist_cafe::before {
-      content: "";
-      position: absolute;
-      top: 75%;
-      left: 0;
-      transform: translate(-15%, -75%);
-      width: 60%;
-      height: 75%;
-      background-color: var(--enorganico-primary-color);
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.125);
-    }
-    #enorganico-our-coffees .container_pricelist_cafe {
-      position: relative;
-    }
-    #enorganico-our-coffees .container_pricelist_cafe::before {
-      content: "";
-      position: absolute;
-      top: 75%;
-      left: 0;
-      transform: translate(-15%, -75%);
-      width: 60%;
-      height: 75%;
-      background-color: var(--enorganico-primary-color);
-    }
-    #enorganico-our-coffees .s_pricelist_cafe_item {
-      cursor: pointer;
-      padding: 12px 15px;
-      transition: all 0.3s ease;
-    }
-    #enorganico-our-coffees .s_pricelist_cafe_item.active {
-      outline: 2px solid var(--enorganico-secondary-color);
-      outline-offset: 4px;
-    }
-    #enorganico-our-coffees .s_pricelist_cafe_item:hover {
-      background-color: rgba(var(--enorganico-secondary-color-rgb, 255, 193, 7), 0.05);
-    }
-    #enorganico-our-coffees img[data-target-image-url] {
-      transition: opacity 0.5s ease;
-      max-height: 400px;
-      object-fit: contain;
-      width: 100%;
-    }
-  </style>
-  <div class="container container_pricelist_cafe">
-    <div class="row">
-      <div class="s_pricelist_cafe_col col-lg-5 pt64 o_colored_level o_cc o_cc5" style="background-color: rgba(255, 255, 255, 0);">
-        <h6 style="color: var(--enorganico-secondary-color);">NUESTRO</h6>
-        <h1 style="font-size: 5rem; line-height: 4rem; font-weight: 900; color: var(--enorganico-secondary-color);">CAFE <br /> ESPRESSO</h1>
+<section id="enorganico-crokini" class="enorganico-crokini py-5">
+  <div class="container py-5">
+    <div class="row align-items-center gap-1">
+      <div class="col-12 offset-md-1 col-md-5 col-lg-5 text-start">
+        <h2 style="font-weight: 300; font-size: 2rem; line-height: 1.8rem; margin-bottom: 0;">Conoce nuestro</h2>
+        <h1 style="font-size: 6rem; line-height: 6rem; font-weight: 900; color: var(--enorganico-primary-color); text-transform: uppercase;">Crokini</h1>
+        <p style="margin: 0; font-size: 1rem; line-height: 1rem; font-weight: 400; margin-bottom: 1rem;">Nuestro crokini de croissant se prepara a la plancha para lograr un hojaldre dorado y crujiente, con un interior suave y fundente de quesos suizos, realzado con un delicado toque de miel.</p>
+        <p style="margin: 0; font-size: 1rem; line-height: 1rem; font-weight: 400; margin-bottom: 1rem;">Una propuesta pensada para disfrutarse a tu manera, acompañada de café espresso intenso, matcha cremoso o yogur helado artesanal, creando el equilibrio perfecto entre sabor, textura y momento.</p>
+        <p><strong><i>Jugoso. Tentador. Incomparable</i></strong></p>
+        <div class="btn-group">
+          <a href="#" style="background-color: var(--enorganico-primary-color); display: inline-flex; justify-content: space-between; align-items: center; padding: 10px 30px; border-radius: 50px; text-decoration: none; color: var(--enroganico-secondary-color);">
+            <span class="hover:mr-2 transition" style="font-size: 1rem; line-height: 1rem; font-weight: 500; text-decoration: none; margin-right: 1rem;">Ordenar Ahora</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+            </svg>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="row align-items-center">
-      <div class="s_pricelist_cafe_col col-lg-4 pb-5 o_cc o_cc5 s_col_no_resize o_colored_level" style="background-color: rgba(28, 27, 24, 0);">
-        <h3 class="h3-fs" style="color: var(--enorganico-secondary-color);">Entienda el Proceso</h3>
-        <p class="lead" style="color: var(--enorganico-secondary-color);">Tres formas de extraer carácter del café</p>
-        <ul class="list-unstyled my-3">
-          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1495-9c7cfffa/espresso-ristretto.webp">
-            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Ristretto</p>
-            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Más corto, más intenso.</p>
-            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Menos agua, mayor concentración. Perfil profundo, sedoso y con carácter marcado.</p>
-          </li>
-          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1494-3de78fbc/espresso-lungo.webp">
-            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Lungo</p>
-            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Más largo y suave.</p>
-            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Mayor cantidad de agua que resalta notas amargas y prolonga el sabor en boca.</p>
-          </li>
-          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1492-51fd3708/espresso-clasico.webp">
-            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Espresso Clásico</p>
-            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">Equilibrado y aromático.</p>
-            <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small">La referencia del café espresso: cuerpo medio, acidez controlada y una crema natural que concentra el sabor.</p>
-          </li>
-        </ul>
-      </div>
-      <div class="s_pricelist_cafe_col col-lg-4 d-lg-block o_snippet_mobile_invisible s_col_no_resize o_colored_level" data-invisible="1">
-        <img class="img img-fluid d-block mx-auto" data-target-image-url="" src="/web/image/1495-9c7cfffa/espresso-ristretto.webp" alt="" loading="lazy" data-mimetype="image/png" />
-      </div>
-      <div class="s_pricelist_cafe_col col-lg-4 py-5 o_cc s_col_no_resize o_colored_level o_cc2">
-        <ul class="list-unstyled my-3">
-          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1493-7ed92895/linea-andino.webp">
-            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea <u>Andino</u></p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Origen:</strong> Colombia</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Tueste:</strong> Medio</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Perfil:</strong> Balanceado, notas a chocolate y caramelo</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Ideal para:</strong> Espresso Ristretto</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small">Un café noble y versátil, pensado para quienes buscan equilibrio y suavidad sin perder carácter.</p>
-          </li>
-          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1496-a4a9df4b/linea-athiopia.webp">
-            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea <u>Ethiopia</u></p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Origen:</strong> África Oriental</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Tueste:</strong> Medio–claro</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Perfil:</strong> Redondo, baja acidez, notas dulces</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Ideal para:</strong> Espresso clásico y lungo, donde sus matices se expresan con claridad.</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small">El origen del café, en su forma más pura.</p>
-          </li>
-          <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1497-2c65102c/linea-cusco.webp">
-            <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold">Línea <u>Cusco</u></p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Origen:</strong> Perú</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Tueste:</strong> Medio–oscuro</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Perfil:</strong> Intenso, cuerpo alto, notas tostadas</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small"><strong>Ideal para:</strong> Espresso clásico y Ristretto</p>
-            <p class="s_pricelist_cafe_item_description d-block text-muted o_small">Granos cultivados en altura que ofrecen profundidad y fuerza. Perfecto para extracciones cortas y potentes.</p>
-          </li>
-        </ul>
+      <div class="offset-2 col-9 offset-md-1 col-md-4 col-lg-4">
+        <div class="image-container">
+          <div class="image-wrapper">
+            <img id="crokini-coffee" class="crokini-image active" src="/web/image/1558-d813fdd0/crokini-coffee.webp" alt="crokini coffee" title="crokini coffee" />
+            <img id="crokini-matcha" class="crokini-image" src="/web/image/1555-9f308734/corkini-matcha.webp" alt="crokini matcha" title="crokini matcha" />
+            <img id="crokini-yogurt" class="crokini-image" src="/web/image/1557-da050d16/crokini-yogurt.webp" alt="crokini yogurt" title="crokini yogurt" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <script is:inline>
-    (function () {
-      "use strict";
+</section>
 
-      // Esperar a que Odoo cargue el DOM
-      if (typeof $ === "undefined") {
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", init);
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Verificar que GSAP esté cargado
+    if (typeof gsap === "undefined") {
+      console.warn("GSAP no está cargado");
+      return;
+    }
+
+    // Registrar ScrollTrigger si está disponible
+    if (typeof ScrollTrigger !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+
+    const section = document.getElementById("enorganico-crokini");
+    const images = document.querySelectorAll(".crokini-image");
+    const imageWrapper = document.querySelector(".image-wrapper");
+
+    if (!section || images.length === 0) return;
+
+    // Configuración
+    const TOTAL_ROTATION = 360; // Rotación total de 360°
+    const FADE_DURATION = 0.3; // Duración del fade entre imágenes
+
+    // Inicializar todas las imágenes con la misma rotación inicial
+    gsap.set(images, {
+      rotation: 0,
+      opacity: 0,
+    });
+
+    // Primera imagen visible
+    gsap.set(images[0], { opacity: 1 });
+
+    // Crear ScrollTrigger para controlar la animación
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 80%",
+      end: "bottom 20%",
+      scrub: 1.5,
+      markers: false, // true para debug
+
+      onUpdate: (self) => {
+        const progress = self.progress;
+
+        // Calcular rotación total continua (de 0 a 360 grados)
+        const totalRotation = progress * TOTAL_ROTATION;
+
+        // Aplicar la misma rotación a todas las imágenes
+        gsap.set(images, {
+          rotation: totalRotation,
+          transformOrigin: "center center",
+        });
+
+        // Aplicar rotación al wrapper también para efecto 3D
+        gsap.set(imageWrapper, {
+          // rotationY: totalRotation * 0.1, // Pequeño efecto 3D
+          transformOrigin: "center center",
+        });
+
+        // Determinar qué imagen mostrar basado en el ángulo de rotación
+        // Cada imagen ocupa 120 grados (360/3)
+        const imageSegment = 120; // Grados por imagen
+        const normalizedRotation = totalRotation % 360;
+
+        // Calcular índice de imagen basado en rotación
+        let activeIndex;
+        let fadeProgress;
+
+        if (normalizedRotation < imageSegment) {
+          activeIndex = 0;
+          fadeProgress = normalizedRotation / imageSegment;
+        } else if (normalizedRotation < imageSegment * 2) {
+          activeIndex = 1;
+          fadeProgress = (normalizedRotation - imageSegment) / imageSegment;
         } else {
-          setTimeout(init, 1000);
-        }
-      } else {
-        $(document).ready(init);
-      }
-
-      function init() {
-        var section = document.getElementById("enorganico-our-coffees");
-        if (!section) {
-          setTimeout(init, 500);
-          return;
+          activeIndex = 2;
+          fadeProgress = (normalizedRotation - imageSegment * 2) / imageSegment;
         }
 
-        var coffeeItems = section.querySelectorAll(".s_pricelist_cafe_item");
-        var targetImage = section.querySelector("img[data-target-image-url]");
+        // Calcular índice de la siguiente imagen
+        const nextIndex = (activeIndex + 1) % images.length;
 
-        if (!targetImage || coffeeItems.length === 0) {
-          return;
-        }
+        // Animar transiciones suaves entre imágenes
+        if (fadeProgress < 0.5) {
+          // La imagen actual está más visible
+          gsap.to(images[activeIndex], {
+            opacity: 1 - fadeProgress * 2, // De 1 a 0 en la primera mitad
+            duration: FADE_DURATION,
+            ease: "power2.out",
+          });
 
-        // Variables de control
-        var currentIndex = 0;
-        var autoRotateInterval;
-        var isUserInteracting = false;
-        var rotationTime = 5000; // 5 segundos
-
-        // Función para activar un item
-        function activateItem(index) {
-          // Remover clase active de todos
-          for (var i = 0; i < coffeeItems.length; i++) {
-            coffeeItems[i].classList.remove("active");
-          }
-
-          // Activar el item seleccionado
-          if (coffeeItems[index]) {
-            coffeeItems[index].classList.add("active");
-
-            // Cambiar imagen
-            var imageUrl = coffeeItems[index].getAttribute("data-image");
-            if (imageUrl && imageUrl !== targetImage.src) {
-              targetImage.style.opacity = "0.5";
-              setTimeout(function () {
-                targetImage.src = imageUrl;
-                targetImage.style.opacity = "1";
-              }, 300);
-            }
-          }
-
-          currentIndex = index;
-        }
-
-        // Función para rotación automática
-        function startAutoRotation() {
-          if (autoRotateInterval) {
-            clearInterval(autoRotateInterval);
-          }
-
-          if (!isUserInteracting) {
-            autoRotateInterval = setInterval(function () {
-              var newIndex;
-              do {
-                newIndex = Math.floor(Math.random() * coffeeItems.length);
-              } while (newIndex === currentIndex && coffeeItems.length > 1);
-
-              activateItem(newIndex);
-            }, rotationTime);
-          }
-        }
-
-        // Añadir eventos a los items
-        for (var i = 0; i < coffeeItems.length; i++) {
-          (function (index) {
-            // Mouse enter
-            coffeeItems[index].addEventListener("mouseenter", function () {
-              isUserInteracting = true;
-              clearInterval(autoRotateInterval);
-              activateItem(index);
+          if (activeIndex === 0) {
+            gsap.to(images[images.length - 1], {
+              opacity: fadeProgress * 2, // La última se vuelve visible
+              duration: FADE_DURATION,
+              ease: "power2.out",
             });
-
-            // Mouse leave
-            coffeeItems[index].addEventListener("mouseleave", function () {
-              isUserInteracting = false;
-              setTimeout(startAutoRotation, 3000);
+          } else {
+            gsap.to(images[activeIndex - 1], {
+              opacity: fadeProgress * 2,
+              duration: FADE_DURATION,
+              ease: "power2.out",
             });
+          }
+        } else {
+          // La siguiente imagen está tomando protagonismo
+          gsap.to(images[activeIndex], {
+            opacity: (1 - fadeProgress) * 2, // De 1 a 0 en la segunda mitad
+            duration: FADE_DURATION,
+            ease: "power2.out",
+          });
 
-            // Touch para móviles
-            coffeeItems[index].addEventListener("touchstart", function (e) {
-              e.preventDefault();
-              isUserInteracting = true;
-              clearInterval(autoRotateInterval);
-              activateItem(index);
-            });
-          })(i);
+          gsap.to(images[nextIndex], {
+            opacity: (fadeProgress - 0.5) * 2, // De 0 a 1 en la segunda mitad
+            duration: FADE_DURATION,
+            ease: "power2.out",
+          });
         }
 
-        // Inicializar
-        setTimeout(function () {
-          activateItem(0);
-          startAutoRotation();
-        }, 1500);
-
-        // Limpiar al salir
-        window.addEventListener("beforeunload", function () {
-          if (autoRotateInterval) {
-            clearInterval(autoRotateInterval);
+        // Actualizar clases para CSS (opcional)
+        images.forEach((img, index) => {
+          if (index === activeIndex || (fadeProgress < 0.5 && index === (activeIndex - 1 + images.length) % images.length) || (fadeProgress >= 0.5 && index === nextIndex)) {
+            img.classList.add("active");
+          } else {
+            img.classList.remove("active");
           }
         });
-      }
-    })();
-  </script>
-</section>
+      },
+    });
+
+    // Efecto de entrada inicial
+    gsap.from(imageWrapper, {
+      opacity: 0,
+      scale: 0.9,
+      rotationY: -30,
+      duration: 1.5,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 85%",
+        end: "top 70%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+</script>

@@ -1,0 +1,76 @@
+@use '../../abstracts/maps' as *;
+@use '../../abstracts/mixins' as *;
+
+#enorganico-crokini {
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 65%;
+      transform: translateX(-50%);
+      background-color: var(--enorganico-primary-color);
+      width: 75%;
+      height: 100%;
+      z-index: 0;
+
+      @media screen and (max-width: 991px) {
+        top: 30%;
+        height: 70%;
+      }
+
+      @media screen and (max-width: 799px) {
+        top: 17%;
+        height: 70%
+      }
+
+      @media screen and (max-width: 767px) {
+        top: 10%;
+        height: 80%;
+      }
+    }
+  }
+
+  .crokini-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    will-change: transform, opacity;
+    z-index: 1;
+    max-width: 100%;
+    scale: 1.25 !important;
+    margin-top: 1rem;
+
+    @media screen and (max-width: 991px) {
+      margin-top: 7rem !important;
+    }
+
+    @media screen and (max-width: 799px) {
+      margin-top: 5rem
+    }
+  }
+
+  .image-wrapper {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    background-color: red;
+  }
+
+  .crokini-image.active {
+    opacity: 1 !important;
+  }
+}
