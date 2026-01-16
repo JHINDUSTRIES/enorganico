@@ -12,8 +12,13 @@
 @use 'components/carousel';
 @use 'components/hamburguer-btn';
 
-// Pages
-@use 'pages/homepage';
+// === Pages ===
+// Home
+@use 'pages/home/section-1';
+@use 'pages/home/section-2';
+@use 'pages/home/section-4';
+@use 'pages/home/section-5';
+@use 'pages/home/section-7';
 
 // Themes
 @use "themes/enorganico";
