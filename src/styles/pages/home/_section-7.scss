@@ -1,0 +1,43 @@
+#enorganico-our-coffees {
+
+  .container_pricelist_cafe {
+    position: relative;
+
+    .s_pricelist_cafe_col {
+      z-index: 999;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 75%;
+      left: 0;
+      transform: translate(-15%, -75%);
+      width: 60%;
+      height: 75%;
+      background-color: var(--enorganico-primary-color);
+    }
+  }
+
+  .s_pricelist_cafe_item {
+    cursor: pointer;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+
+    &.active {
+      outline: 2px solid var(--enorganico-secondary-color);
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      background-color: rgba(var(--enorganico-secondary-color-rgb, 255, 193, 7), 0.05);
+    }
+  }
+
+  img[data-target-image-url] {
+    transition: opacity 0.5s ease;
+    max-height: 400px;
+    object-fit: contain;
+    width: 100%;
+  }
+}
