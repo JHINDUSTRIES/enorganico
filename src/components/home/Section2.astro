@@ -1,103 +1,53 @@
-<section id="infinite-slider" class="enorganico enorganic-infinite-slider">
+<section id="enorganico-infinite-slider" class="enorganic-infinite-slider">
   <div class="container-fluid px-0">
     <div class="row">
       <div class="col-12">
         <div class="enorganico-slider">
           <div class="enorganico-slider__track">
             <div class="enorganico-slider__track--item item-slider">
-              <span>Espresso Clasico</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>Cafe Gourmet</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>Un croissant gratis con tu latte</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>Tradicion Española</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
-              <span>Suscribete y tu primer cafe va por la casa</span>
-            </div>
-            <div class="enorganico-slider__track--item item-slider">
               <span>Despierta tus sentidos</span>
-              <div class="enorganico-slider__track--item item-slider">
-                <span>2x1 en espresso por la mañana</span>
-              </div>
-              <div class="enorganico-slider__track--item item-slider">
-                <span>2x1 en espresso por la mañana</span>
-              </div>
-              <div class="enorganico-slider__track--item item-slider">
-                <span>Del grano a tu taza</span>
-              </div>
-              <div class="enorganico-slider__track--item item-slider">
-                <span>Mas cafe, una experiencia</span>
-              </div>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Cafe de origen Colombiano 100%</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Sabores que te haran volver</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Matcha Ecologico 100%</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Bienestar en cada taza</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Suscribete y conoceras los beneficios</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Productos hechos cada dia</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Opciones sin gluten</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Calidad y sabore que inspiran</span>
+            </div>
+            <div class="enorganico-slider__track--item item-slider">
+              <span>Experiencia unica en cada bocado</span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <script is:inline>
-    const track = document.querySelector(".enorganico-slider__track");
-    const slides = Array.from(track.children);
-
-    slides.forEach((slide) => {
-      const clone = slide.cloneNode(true);
-      track.appendChild(clone);
-    });
-  </script>
-
-  <style lang="scss">
-    .enorganico {
-      &#infinite-slider {
-        width: auto;
-        min-width: 100%;
-        overflow: hidden;
-      }
-
-      &-slider {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        color: var(--enorganico-black-color);
-        background-color: var(--enorganico-primary-color);
-        font-size: 1.25rem;
-        font-weight: var(--enorganico-font-weight-medium);
-
-        &__track {
-          display: flex;
-          width: max-content;
-          animation: scroll 20s linear infinite;
-
-          .item-slider {
-            flex: 0 0 auto;
-            padding: 0 3rem;
-            position: relative;
-
-            &::before {
-              content: "·";
-              position: absolute;
-              top: -50%;
-              left: 0%;
-              transform: translateX(-50%, 50%);
-              font-size: 2rem;
-              font-weight: var(--enorganico-font-weight-black);
-            }
-          }
-
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-        }
-      }
-    }
-  </style>
 </section>
+
+<script is:inline>
+  const track = document.querySelector(".enorganico-slider__track");
+  const slides = Array.from(track.children);
+
+  // Duplicar los slides para el efecto infinito
+  slides.forEach((slide) => {
+    const clone = slide.cloneNode(true);
+    track.appendChild(clone);
+  });
+</script>
