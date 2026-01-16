@@ -23,10 +23,12 @@
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.6",
     "gh-pages": "^6.3.0",
     "postcss-discard": "^2.0.0",
     "postcss-discard-comments": "^7.0.4",
     "postcss-preset-env": "^10.3.1",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.9.3"
   }
 }
