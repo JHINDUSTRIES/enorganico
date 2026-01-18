@@ -5,6 +5,7 @@
 header#top {
   position: fixed;
   width: 100%;
+
   nav.navbar.navbar-light.o_colored_level.o_cc.d-none.d-lg-block.shadow-sm,
   nav.navbar.navbar-light.o_colored_level.o_cc.o_header_mobile.d-block.d-lg-none.shadow-sm {
     background-color: transparent !important;
@@ -17,7 +18,9 @@ header#top {
 }
 
 .o_header_mobile {
-  i, svg {
+
+  i,
+  svg {
     &::before {
       font-size: clamp(2rem, 2.5vw, 1.25rem);
       line-height: 100%;
@@ -30,14 +33,16 @@ header#top {
 .o_no_autohide_menu {
 
   &.o_header_is_scrolled.o_header_affixed {
-    
+
     nav.navbar.navbar-light.o_colored_level.o_cc.d-none.d-lg-block.shadow-sm {
       background-color: transparent !important;
     }
-    
+
     // Mobile
     .o_header_mobile {
-      i, svg {
+
+      i,
+      svg {
         &::before {
           font-size: clamp(2rem, 2.5vw, 1.25rem);
           line-height: 100%;
@@ -81,8 +86,9 @@ ul.o_header_hamburger_right_col {
       &::after {
         color: var(--enorganico-secondary-color);
       }
-      
-      i, svg {
+
+      i,
+      svg {
         width: auto !important;
         height: auto !important;
 
@@ -96,7 +102,7 @@ ul.o_header_hamburger_right_col {
   }
 }
 
-#wrapwrap.o_header_overlay>header:not(.o_header_affixed):not(.o_header_sidebar):not(.o_top_menu_collapse_shown)>.navbar  {
+#wrapwrap.o_header_overlay>header:not(.o_header_affixed):not(.o_header_sidebar):not(.o_top_menu_collapse_shown)>.navbar {
 
   button {
     background-image: none !important;
@@ -122,8 +128,9 @@ ul.o_header_hamburger_right_col {
         &::after {
           color: var(--enorganico-primary-color);
         }
-        
-        i, svg {
+
+        i,
+        svg {
           width: auto !important;
           height: auto !important;
 
@@ -134,7 +141,7 @@ ul.o_header_hamburger_right_col {
           }
         }
 
-        ~ .dropdown-menu {
+        ~.dropdown-menu {
           padding: 1rem .5rem;
 
           .dropdown-item {
@@ -144,7 +151,8 @@ ul.o_header_hamburger_right_col {
             font-size: .75rem;
             line-height: 0.75rem;
 
-            i, svg {
+            i,
+            svg {
               width: 30px !important;
               color: var(--enorganico-primary-color);
             }
@@ -152,10 +160,12 @@ ul.o_header_hamburger_right_col {
         }
       }
     }
-  }  
+  }
 }
 
-.navbar-toggler:focus { box-shadow: unset !important; }
+.navbar-toggler:focus {
+  box-shadow: unset !important;
+}
 
 /* ================================================================================================================ */
 /* ======================================== Orden Visual del Menu ================================================= */
@@ -168,13 +178,13 @@ div#o_main_nav.o_main_nav.d-grid.py-0.o_grid_header_3_cols.container-fluid {
   justify-content: space-between;
 
   /* Logo de Enorganico */
-  > a.navbar-brand.logo.mw-100.mx-auto {
+  >a.navbar-brand.logo.mw-100.mx-auto {
     order: 1;
     display: block;
     margin-right: auto !important;
     margin-left: 0 !important;
     position: relative;
-    
+
     span {
       position: absolute;
       top: 3rem;
@@ -182,7 +192,7 @@ div#o_main_nav.o_main_nav.d-grid.py-0.o_grid_header_3_cols.container-fluid {
       width: 150px;
       margin-left: 2rem;
       transform: translate(0%, -50%);
-      
+
       img {
         width: 100%;
         height: 100%;
@@ -191,14 +201,14 @@ div#o_main_nav.o_main_nav.d-grid.py-0.o_grid_header_3_cols.container-fluid {
   }
 
   /* Boton Hamburguesa */
-  > button.navbar-toggler.btn.me-auto.p-2.o_not_editable {
+  >button.navbar-toggler.btn.me-auto.p-2.o_not_editable {
     order: 3;
     margin-right: 2rem !important;
     margin-left: 2rem;
   }
 
   /* Contenedor de los Iconos del Header */
-  > ul.o_header_hamburger_right_col.navbar-nav.flex-row.gap-2.align-items-center.ms-auto {
+  >ul.o_header_hamburger_right_col.navbar-nav.flex-row.gap-2.align-items-center.ms-auto {
     order: 2;
     margin-left: unset !important;
 
@@ -214,7 +224,17 @@ div#o_main_nav.o_main_nav.d-grid.py-0.o_grid_header_3_cols.container-fluid {
 /* ================================================================================================================ */
 
 /* Footer */
-.o_footer_copyright {
-  display: none;
-}
+#bottom {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  z-index: 100 !important;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
 
+  span {
+    color: var(--enorganico-primary-color);
+  }
+}
