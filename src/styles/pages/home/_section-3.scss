@@ -1,0 +1,55 @@
+#enorganico-yoguricioso {
+
+  * {
+    text-align: left;
+  }
+
+  .s_timeline_content {
+    position: relative;
+
+    span[data-step-before]::before {
+      position: absolute;
+      content: attr(data-step-before);
+      top: 0;
+      left: 0;
+      transform: translate(0%, 0%);
+      font-size: 10rem;
+      line-height: 10rem;
+      font-weight: 900;
+      color: var(--enorganico-secondary-color);
+      opacity: 0.1;
+    }
+  }
+
+  .s_timeline_row {
+    margin-block: 3rem;
+  }
+
+  p:first-child {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+
+  strong {
+    display: block;
+  }
+
+  a span {
+    text-transform: uppercase;
+    margin-right: 1rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 4rem !important;
+    letter-spacing: -1px;
+    word-spacing: 10px;
+    margin-bottom: 2rem;
+    color: var(--enorganico-secondary-color);
+    opacity: .5;
+    margin-bottom: 0;
+  }
+}

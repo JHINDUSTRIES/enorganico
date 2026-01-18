@@ -1,19 +1,15 @@
----
-import odooFullStyles from "../../styles/odoo-full-styles.css";
-import odooOverrideStyles from "../../styles/odoo-override.css";
----
-
-<section class="s_sidegrid o_colored_level o_cc o_cc2 pb0 pt0" data-snippet="s_sidegrid" data-name="Cuadrícula lateral">
+<section id="enorganico-yoguricioso" class="s_sidegrid o_colored_level o_cc o_cc2 pb0 pt0" data-snippet="s_sidegrid" data-name="Cuadrícula lateral">
   <div class="container">
-    <div class="row o_grid_mode" data-row-count="12">
+    <div class="row align-items-center o_grid_mode" data-row-count="12">
       <div class="o_grid_item o_colored_level g-col-lg-6 g-height-10 col-lg-6" style="z-index: 1; grid-area: 3 / 7 / 13 / 13; --grid-item-padding-x: 24px;">
-        <p style="font-size: 1rem; text-transform: uppercase; font-weight: 300;">Conoce nuestro</p>
-        <h1 style="font-size: 7rem;font-weight: 900;line-height: 6rem !important;letter-spacing: -1px;word-spacing: 10px;margin-bottom: 2rem;color: var(--enorganico-secondary-color);opacity: .5;">YOGURICIOSO</h1>
-        <p>Ligero, cremoso y naturalmente refrescante. Nuestro yogur helado, elaborado con ingredientes de alta calidad cada día, ofrece una textura cremosa y un sabor suave. Una propuesta fresca y reconfortante, perfecta para disfrutar sola o acompañada de tus toppings favoritos.</p><strong style="display: block;">
+        <p>Conoce nuestro</p>
+        <h1>YOGURICIOSO</h1>
+        <p>Ligero, cremoso y naturalmente refrescante. Nuestro yogur helado, elaborado con ingredientes de alta calidad cada día, ofrece una textura cremosa y un sabor suave. Una propuesta fresca y reconfortante, perfecta para disfrutar sola o acompañada de tus toppings favoritos.</p>
+        <strong>
           <i>Natural. Cremoso. Hecho cada día.</i>
         </strong>
         <a href="/toppings-yoguricioso" class="d-inline-flex align-items-center mt32 btn btn-primary">
-          <span style="text-transform: uppercase; margin-right: 1rem;">Nuestros toppings</span>
+          <span>Nuestros toppings</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
           </svg>
@@ -29,16 +25,42 @@ import odooOverrideStyles from "../../styles/odoo-override.css";
   </div>
 </section>
 
-<style lang="scss" is:inline>
-  .s_sidegrid.o_colored_level.o_cc.o_cc2.pb0.pt0 {
-    .row {
-      display: flex;
-      flex-direction: row-reverse;
+{import.meta.env.DEV && (
+  <style lang="scss">
+    section.s_sidegrid.o_colored_level.o_cc.o_cc2.pb0.pt0 {
+      padding-block: 7rem;
+      .row {
+        display: flex;
+        flex-direction: row-reverse;
 
-      .o_grid_item_image:first-child {
+        .o_grid_item_image:first-child {
+          position: absolute;
+          width: 10%;
+        }
+      }
+
+      p ~ strong {
+        margin-bottom: 1rem;
+      }
+
+      .btn-primary {
+        background-color: var(--enorganico-primary-color);
+        border: none;
+        border-radius: 50px;
+        width: auto;
+        min-width: 300px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--enorganico-secondary-color);
+        font-weight: 900;
+      }
+
+      .o_grid_item.o_grid_item_image.o_snippet_mobile_invisible:last-child {
         position: absolute;
-        width: 10%;
+        left: 15%;
+        max-width: 30%;
       }
     }
-  }
-</style>
+  </style>
+)}

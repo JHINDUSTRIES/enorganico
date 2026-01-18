@@ -1,0 +1,28 @@
+#enorganico-brownie {
+
+  .row a {
+    border-radius: 50px;
+
+    @media screen and (max-width: 640px) {
+      animation: brownie-infinite-slider-continues infinite 40s linear;
+    }
+
+    &:hover~.brownie-is-img img {
+      animation: brownie-infinite-slider-continues infinite 40s linear;
+    }
+  }
+
+  .brownie-is-img {
+    border-radius: 50px;
+  }
+}
+
+@keyframes brownie-infinite-slider-continues {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
