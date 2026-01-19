@@ -1,12 +1,18 @@
+---
+import v3mov from "../../assets/videos/bg-video-3.mov";
+import v3webm from "../../assets/videos/bg-video-2.webm";
+import v3mp4 from "../../assets/videos/bg-video-3.mp4";
+---
+
 <section id="hero" class="enorganico enorganico-hero">
   <div class="container-fluid px-0">
     <div class="row">
       <div class="col-12 position-relative before:position-absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:w-full before:h-full before:bg-black/75">
         <picture>
           <video webkit-playsinline="" playsinline="" autoplay="" muted="" loop="" class="enorganico-hero__video w-100 h-[100dvh] object-cover">
-            <source src="https://jhindustries.github.io/enorganico/assets/bg-video-3.Bk6QAdYF.mp4" type="video/mp4" />
-            <source src="https://jhindustries.github.io/enorganico/assets/bg-video-3.BaCWA7fM.mov" type="video/webm" />
-            <source src="https://jhindustries.github.io/enorganico/assets/bg-video-3.rPfE-k3I.webm" type="video/mov" />
+            <source src={v3mov} type="video/mp4" />
+            <source src={v3webm} type="video/webm" />
+            <source src={v3mp4} type="video/mov" />
           </video>
         </picture>
       </div>
