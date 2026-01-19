@@ -1,136 +1,511 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="../assets/"><meta name="generator" content="Astro v5.15.9"><title>Astro Basics</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><link rel="stylesheet" href="/enorganico/assets/index.C5Yte66B.css"></head> <body class="overflow-x-hidden">  <section id="hero" class="enorganico enorganico-hero" data-astro-cid-4ldttdjy> <div class="container-fluid px-0" data-astro-cid-4ldttdjy> <div class="row" data-astro-cid-4ldttdjy> <div class="col-12 position-relative before:position-absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:w-full before:h-full before:bg-black/75" data-astro-cid-4ldttdjy> <picture data-astro-cid-4ldttdjy> <video webkit-playsinline="" playsinline="" autoplay="" muted="" loop="" class="enorganico-hero__video w-100 h-[100dvh] object-cover" data-astro-cid-4ldttdjy> <source src="/enorganico/assets/bg-video-3.Bk6QAdYF.mp4" type="video/mp4" data-astro-cid-4ldttdjy> <source src="/enorganico/assets/bg-video-3.rPfE-k3I.webm" type="video/webm" data-astro-cid-4ldttdjy> <source src="/enorganico/assets/bg-video-3.BaCWA7fM.mov" type="video/mov" data-astro-cid-4ldttdjy> </video> </picture> </div> </div> </div> </section>  <section id="infinite-slider" class="enorganico enorganic-infinite-slider" data-astro-cid-dvl7spty> <div class="container-fluid px-0" data-astro-cid-dvl7spty> <div class="row" data-astro-cid-dvl7spty> <div class="col-12" data-astro-cid-dvl7spty> <div class="enorganico-slider" data-astro-cid-dvl7spty> <div class="enorganico-slider__track" data-astro-cid-dvl7spty> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Espresso Clasico</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Cafe Gourmet</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Un croissant gratis con tu latte</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Tradicion Española</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Suscribete y tu primer cafe va por la casa</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Despierta tus sentidos</span> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>2x1 en espresso por la mañana</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>2x1 en espresso por la mañana</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Del grano a tu taza</span> </div> <div class="enorganico-slider__track--item item-slider" data-astro-cid-dvl7spty> <span data-astro-cid-dvl7spty>Mas cafe, una experiencia</span> </div> </div> </div> </div> </div> </div> </div> <script>
-    const track = document.querySelector(".enorganico-slider__track");
-    const slides = Array.from(track.children);
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.16.10"><title>Enorgánico - Preview Odoo</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet"><link rel="stylesheet" href="/enorganico/assets/index.CV6kzG17.css"></head> <body class="overflow-x-hidden">  <section id="hero" class="enorganico enorganico-hero"> <div class="container-fluid px-0"> <div class="row"> <div class="col-12 position-relative before:position-absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:w-full before:h-full before:bg-black/75"> <picture> <video webkit-playsinline="" playsinline="" autoplay="" muted="" loop="" class="enorganico-hero__video w-100 h-[100dvh] object-cover"> <source src="https://jhindustries.github.io/enorganico/assets/bg-video-3.Bk6QAdYF.mp4" type="video/mp4"> <source src="https://jhindustries.github.io/enorganico/assets/bg-video-3.BaCWA7fM.mov" type="video/webm"> <source src="https://jhindustries.github.io/enorganico/assets/bg-video-3.rPfE-k3I.webm" type="video/mov"> </video> </picture> </div> </div> </div> </section> <section id="enorganico-infinite-slider" class="enorganic-infinite-slider"> <div class="container-fluid px-0"> <div class="row"> <div class="col-12"> <div class="enorganico-slider"> <div class="enorganico-slider__track"> <div class="enorganico-slider__track--item item-slider"> <span>Despierta tus sentidos</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Cafe de origen Colombiano 100%</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Sabores que te haran volver</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Matcha Ecologico 100%</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Bienestar en cada taza</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Suscribete y conoceras los beneficios</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Productos hechos cada dia</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Opciones sin gluten</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Calidad y sabore que inspiran</span> </div> <div class="enorganico-slider__track--item item-slider"> <span>Experiencia unica en cada bocado</span> </div> </div> </div> </div> </div> </div> </section> <script>
+  const track = document.querySelector(".enorganico-slider__track");
+  const slides = Array.from(track.children);
 
-    slides.forEach((slide) => {
-      const clone = slide.cloneNode(true);
-      track.appendChild(clone);
+  // Duplicar los slides para el efecto infinito
+  slides.forEach((slide) => {
+    const clone = slide.cloneNode(true);
+    track.appendChild(clone);
+  });
+</script> <section id="enorganico-yoguricioso" class="s_sidegrid o_colored_level o_cc o_cc2 pb0 pt0" data-snippet="s_sidegrid" data-name="Cuadrícula lateral"> <div class="container"> <div class="row align-items-center o_grid_mode" data-row-count="12"> <div class="o_grid_item o_colored_level g-col-lg-6 g-height-10 col-lg-6" style="z-index: 1; grid-area: 3 / 7 / 13 / 13; --grid-item-padding-x: 24px;"> <p>Conoce nuestro</p> <h1>YOGURICIOSO</h1> <p>Ligero, cremoso y naturalmente refrescante. Nuestro yogur helado, elaborado con ingredientes de alta calidad cada día, ofrece una textura cremosa y un sabor suave. Una propuesta fresca y reconfortante, perfecta para disfrutar sola o acompañada de tus toppings favoritos.</p> <strong> <i>Natural. Cremoso. Hecho cada día.</i> </strong> <a href="/toppings-yoguricioso" class="d-inline-flex align-items-center mt32 btn btn-primary"> <span>Nuestros toppings</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path> </svg> </a> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible d-lg-block o_colored_level g-height-9 g-col-lg-3 col-lg-3" style="z-index: 5; grid-area: 2 / 4 / 11 / 7;" data-invisible="1"> <img src="/web/image/1573-19367e0a/seccion-3-2-upscale.webp" alt="" data-attachment-id="1572" class="img img-fluid o_we_custom_image rounded" data-format-mimetype="image/webp" data-original-id="1572" data-original-src="/web/image/1572-b1cfad7d/seccion-3-2-upscale.png" data-mimetype-before-conversion="image/png" data-resize-width="665" data-mimetype="image/webp"> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible d-lg-block d-none o_colored_level g-height-8 g-col-lg-4 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1"> <img src="/web/image/1529-b3ac251e/seccion-3-1.webp" alt="" data-attachment-id="1527" class="img img-fluid rounded o_we_custom_image" data-format-mimetype="image/webp" data-original-id="1527" data-original-src="/web/image/1527-5ed6d8bd/seccion-3-1.jpg" data-mimetype-before-conversion="image/jpeg" data-resize-width="690" data-mimetype="image/webp" loading="lazy"> </div> </div> </div> </section>  <section class="s_timeline pt48 pb48 o_colored_level o_cc o_cc2" data-vcss="002" data-snippet="s_timeline" data-name="Línea de tiempo"> <div class="container"> <h1 class="text-center text-6xl! leading-[4rem] font-black! text-(--enorganico-secondary-color)! opacity-50 uppercase">SmashWaffles</h1> <p class="text-md uppercase font-normal text-center">Descubre cómo los preparamos</p> <p class="text-md font-normal text-center w-50 m-auto">Se aplastan para lograr esa textura fina y dorada que se funde en cada bocado. Un placer perfecto para cualquier momento del día, siempre recién hecho.</p> <div class="position-relative pt-3"> <!-- Paso 1 --> <div class="s_timeline_row position-relative d-flex align-items-center gap-md-5 flex-column flex-md-row pb-4" data-name="Milestone"> <div class="s_timeline_content w-100 ps-4 ps-md-0"> <div class="s_timeline_card s_card card my-0 ms-auto o_colored_level text-md-end" style="border-width: 0px !important;" data-vxml="001" data-snippet="s_card" data-name="Milestone Event"> <div class="card-body"> <span data-step-before="01"></span> <h3 style="font-size: 2rem; line-height: 2rem; font-weight: 700; color: var(--enorganico-secondary-color)">La masa</h3> <p>Nuestros smashwaffles elaborados al momento, con ingredientes holandeses de primera calidad, cuidadosamente medidos para lograr la textura perfecta.</p> </div> </div> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible d-lg-block o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1"> <img src="/web/image/1476-fb0da9aa/seccion-4-1.webp" alt="" data-attachment-id="1475" class="img img-fluid rounded o_we_custom_image" style="max-height: 40vh; object-fit: cover; object-position: center center; height: auto !important;" data-format-mimetype="image/webp" data-original-id="1475" data-original-src="/web/image/1475-09cec044/seccion-4-1.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" loading="lazy"> </div> </div> <!-- Paso 2 --> <div class="s_timeline_row position-relative d-flex align-items-center gap-md-5 flex-column flex-md-row pb-4" data-name="Milestone"> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible order-1 order-md-0 d-lg-block o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1"> <img src="/web/image/1478-f9db5481/seccion-4-2.webp" alt="" data-attachment-id="1477" class="img img-fluid rounded o_we_custom_image" style="max-height: 40vh; object-fit: cover; object-position: center center; height: auto !important;" data-format-mimetype="image/webp" data-original-id="1477" data-original-src="/web/image/1477-e1e67e34/seccion-4-2.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" loading="lazy"> </div> <div class="s_timeline_content w-100 ps-4 ps-md-0"> <div class="s_timeline_card s_card card my-0 ms-auto o_colored_level text-md-end" style="border-width: 0px !important;" data-vxml="001" data-snippet="s_card" data-name="Milestone Event"> <div class="card-body"> <span data-step-before="02"></span> <h3 style="font-size: 2rem; line-height: 2rem; font-weight: 700; color: var(--enorganico-secondary-color)">El prensado</h3> <p>Aplastamos cada waffle para lograr esa textura fina. Crujiente y caramelizado por fuera, suave por dentro.</p> </div> </div> </div> </div> <!-- Paso 3 --> <div class="s_timeline_row position-relative d-flex align-items-center gap-md-5 flex-column flex-md-row pb-4" data-name="Milestone"> <div class="s_timeline_content w-100 ps-4 ps-md-0"> <div class="s_timeline_card s_card card my-0 ms-auto o_colored_level text-md-end" style="border-width: 0px !important;" data-vxml="001" data-snippet="s_card" data-name="Milestone Event"> <div class="card-body"> <span data-step-before="03"></span> <h3 style="font-size: 2rem; line-height: 2rem; font-weight: 700; color: var(--enorganico-secondary-color)">El toque final</h3> <p>La magia sucede cuando eliges hacerlo tuyo. Cuando la base es buena, todo lo demás suma.</p> </div> </div> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible order-1 order-md-0 d-lg-block o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1"> <img src="/web/image/1480-fef8e3e2/Seccion-4-4.webp" alt="" data-attachment-id="1479" class="img img-fluid rounded o_we_custom_image" style="max-height: 40vh; object-fit: cover; object-position: center center; height: auto !important;" data-format-mimetype="image/webp" data-original-id="1479" data-original-src="/web/image/1479-e03aa73c/Seccion-4-4.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" data-quality="100" loading="lazy"> </div> </div> </div> </div> </section> <section id="enorganico-crokini" class="enorganico-crokini py-5"> <div class="container py-5"> <div class="row align-items-center gap-1"> <div class="col-12 offset-md-1 col-md-5 col-lg-5 text-start"> <h2 class="font-extralight! text-lg leading-[1.8rem] mb-0">Conoce nuestro</h2> <h1 class="text-7xl! leading-[6rem] font-black! text-(--enorganico-secondary-color)! uppercase opacity-50">Crokini</h1> <p class="m-0 text-md leading-[1rem] font-medium mb-[1rem]!">Nuestro crokini de croissant se prepara a la plancha para lograr un hojaldre dorado y crujiente, con un interior suave y fundente de quesos suizos, realzado con un delicado toque de miel.</p> <p style="margin: 0; font-size: 1rem; line-height: 1rem; font-weight: 400; margin-bottom: 1rem;">Una propuesta pensada para disfrutarse a tu manera, acompañada de café espresso intenso, matcha cremoso o yogur helado artesanal, creando el equilibrio perfecto entre sabor, textura y momento.</p> <p><strong><i>Jugoso. Tentador. Incomparable</i></strong></p> <div class="btn-group"> <a href="#" style="background-color: var(--enorganico-primary-color); display: inline-flex; justify-content: space-between; align-items: center; padding: 10px 30px; border-radius: 50px; text-decoration: none; color: var(--enroganico-secondary-color);"> <span class="hover:mr-2 transition" style="font-size: 1rem; line-height: 1rem; font-weight: 500; text-decoration: none; margin-right: 1rem;">Ordenar Ahora</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path> </svg> </a> </div> </div> <div class="offset-2 col-9 offset-md-1 col-md-4 col-lg-4"> <div class="image-container"> <div class="image-wrapper"> <img id="crokini-coffee" class="crokini-image active" src="/web/image/1558-d813fdd0/crokini-coffee.webp" alt="crokini coffee" title="crokini coffee"> <img id="crokini-matcha" class="crokini-image" src="/web/image/1555-9f308734/corkini-matcha.webp" alt="crokini matcha" title="crokini matcha"> <img id="crokini-yogurt" class="crokini-image" src="/web/image/1557-da050d16/crokini-yogurt.webp" alt="crokini yogurt" title="crokini yogurt"> </div> </div> </div> </div> </div> </section> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Verificar que GSAP esté cargado
+    if (typeof gsap === "undefined") {
+      console.warn("GSAP no está cargado");
+      return;
+    }
+
+    // Registrar ScrollTrigger si está disponible
+    if (typeof ScrollTrigger !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+
+    const section = document.getElementById("enorganico-crokini");
+    const images = document.querySelectorAll(".crokini-image");
+    const imageWrapper = document.querySelector(".image-wrapper");
+
+    if (!section || images.length === 0) return;
+
+    // Configuración
+    const TOTAL_ROTATION = 360; // Rotación total de 360°
+    const FADE_DURATION = 0.3; // Duración del fade entre imágenes
+
+    // Inicializar todas las imágenes con la misma rotación inicial
+    gsap.set(images, {
+      rotation: 0,
+      opacity: 0,
     });
-  </script>  </section> <section class="s_sidegrid o_colored_level o_cc o_cc2 pt88 pb120" data-snippet="s_sidegrid" data-name="Cuadrícula lateral"> <div class="container"> <div class="row o_grid_mode" data-row-count="14"> <div class="o_grid_item o_colored_level g-col-lg-6 g-height-13 col-lg-6" style="z-index: 1; grid-area: 2 / 7 / 15 / 13; --grid-item-padding-x: 24px;"> <p style="font-size: 1rem; text-transform: uppercase; font-weight: 300;">Conoce nuestro</p> <h1 style="font-size: 7rem;font-weight: 900;line-height: 6rem !important;letter-spacing: -1px;word-spacing: 10px;margin-bottom: 2rem;color: var(--enorganico-secondary-color);opacity: .5;">YOGUR<br>HELADO</h1> <p>Nuestro yogur helado se elabora cada mañana en pequeñas cantidades, cuidando cada detalle del proceso. Buscamos una textura suave y cremosa, un sabor equilibrado y una sensación fresca que se disfrute desde la primera cucharada.</p> <p>Trabajamos con ingredientes seleccionados, sin artificios innecesarios, respetando el producto y su origen. El resultado es un yogur helado ligero, natural y honesto, pensado para quienes valoran lo simple hecho bien.</p> <p>Perfecto para cualquier momento del día: como desayuno ligero, pausa de media tarde o un capricho consciente.</p> <strong style="display: block;"><i>Natural. Cremoso. Hecho cada día.</i></strong> <a href="#" class="btn btn-primary d-inline-flex align-items-center mt32" style="font-weight: 600;"> <span style="text-transform: uppercase; margin-right: 1rem;">Descubrir sabores</span> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"> <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path> </svg> </a> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible d-lg-block o_colored_level g-col-lg-3 g-height-9 col-lg-3" style="z-index: 5; grid-area: 2 / 4 / 11 / 7;" data-invisible="1"> <img src="/web/image/1474-b6504ded/section-2-1.webp" alt="" data-attachment-id="1471" class="img img-fluid o_we_custom_image rounded" data-format-mimetype="image/webp" data-original-id="1471" data-original-src="/web/image/1471-08c4d97e/section-2-1.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" loading="lazy"> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible d-lg-block d-none o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1"> <img src="/web/image/1473-2d01674f/section-2-2.webp" alt="" data-attachment-id="1472" class="img img-fluid rounded o_we_custom_image" data-format-mimetype="image/webp" data-original-id="1472" data-original-src="/web/image/1472-542171a3/section-2-2.jpg" data-mimetype-before-conversion="image/jpeg" data-resize-width="690" data-mimetype="image/webp" loading="lazy"> </div> </div> </div> </section> <section class="s_timeline pt48 pb48 o_colored_level o_cc o_cc2" data-vcss="002" data-snippet="s_timeline" data-name="Línea de tiempo" data-astro-cid-ru23m746> <div class="container" data-astro-cid-ru23m746> <h1 style="text-align: center; font-size: 4rem; line-height: 4rem; font-weight: 900; color: var(--enorganico-secondary-color)" data-astro-cid-ru23m746>SmashWaffles</h1> <p style="font-size: 1rem; text-transform: uppercase; font-weight: 300; text-align: center;" data-astro-cid-ru23m746>Descubre cómo los preparamos</p>  <div class="position-relative pt-3" data-astro-cid-ru23m746> <div class="s_timeline_row position-relative d-flex align-items-center gap-md-5 flex-column flex-md-row pb-4" data-name="Milestone" data-astro-cid-ru23m746> <div class="s_timeline_content w-100 ps-4 ps-md-0" data-astro-cid-ru23m746> <div class="s_timeline_card s_card card my-0 ms-auto o_colored_level text-md-end" style="border-width: 0px !important;" data-vxml="001" data-snippet="s_card" data-name="Milestone Event" data-astro-cid-ru23m746> <div class="card-body" data-astro-cid-ru23m746> <span data-step-before="01" data-astro-cid-ru23m746></span> <h3 style="font-size: 2rem; line-height: 2rem; font-weight: 700; color: var(--enorganico-secondary-color)" data-astro-cid-ru23m746>La masa</h3> <p data-astro-cid-ru23m746>No partimos de recetas industriales ni mezclas prefabricadas.</p> <p data-astro-cid-ru23m746>Nuestra masa se elabora con ingredientes seleccionados, buscando una textura equilibrada: suave por dentro, con cuerpo y sabor real.</p> <p data-astro-cid-ru23m746>
-Es una masa pensada para ser
-<strong data-astro-cid-ru23m746>aplastada</strong>, no
-<strong data-astro-cid-ru23m746>inflada</strong>, lo que le da su identidad única.
-</p> </div> </div> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible d-lg-block o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1" data-astro-cid-ru23m746> <img src="/web/image/1476-fb0da9aa/seccion-4-1.webp" alt="" data-attachment-id="1475" class="img img-fluid rounded o_we_custom_image" style="max-height: 40vh; object-fit: cover; object-position: center center; height: auto !important;" data-format-mimetype="image/webp" data-original-id="1475" data-original-src="/web/image/1475-09cec044/seccion-4-1.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" loading="lazy" data-astro-cid-ru23m746> </div> </div> <div class="s_timeline_row position-relative d-flex align-items-center gap-md-5 flex-column flex-md-row pb-4" data-name="Milestone" data-astro-cid-ru23m746> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible order-1 order-md-0 d-lg-block o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1" data-astro-cid-ru23m746> <img src="/web/image/1478-f9db5481/seccion-4-2.webp" alt="" data-attachment-id="1477" class="img img-fluid rounded o_we_custom_image" style="max-height: 40vh; object-fit: cover; object-position: center center; height: auto !important;" data-format-mimetype="image/webp" data-original-id="1477" data-original-src="/web/image/1477-e1e67e34/seccion-4-2.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" loading="lazy" data-astro-cid-ru23m746> </div> <div class="s_timeline_content w-100 ps-4 ps-md-0" data-astro-cid-ru23m746> <div class="s_timeline_card s_card card my-0 ms-auto o_colored_level text-md-end" style="border-width: 0px !important;" data-vxml="001" data-snippet="s_card" data-name="Milestone Event" data-astro-cid-ru23m746> <div class="card-body" data-astro-cid-ru23m746> <span data-step-before="02" data-astro-cid-ru23m746></span> <h3 style="font-size: 2rem; line-height: 2rem; font-weight: 700; color: var(--enorganico-secondary-color)" data-astro-cid-ru23m746>El prensado</h3> <p data-astro-cid-ru23m746> <strong data-astro-cid-ru23m746>Aquí ocurre la magia.</strong> </p> <p data-astro-cid-ru23m746>
-La masa se prensa directamente en la plancha caliente, creando un waffle fino,
-<strong data-astro-cid-ru23m746>compacto</strong> y
-<strong data-astro-cid-ru23m746>crujiente</strong>, muy distinto al waffle clásico americano.
-</p> <p data-astro-cid-ru23m746>Este proceso permite que el exterior quede dorado y caramelizado, mientras el interior mantiene suavidad y carácter.</p> </div> </div> </div> </div> <div class="s_timeline_row position-relative d-flex align-items-center gap-md-5 flex-column flex-md-row pb-4" data-name="Milestone" data-astro-cid-ru23m746> <div class="s_timeline_content w-100 ps-4 ps-md-0" data-astro-cid-ru23m746> <div class="s_timeline_card s_card card my-0 ms-auto o_colored_level text-md-end" style="border-width: 0px !important;" data-vxml="001" data-snippet="s_card" data-name="Milestone Event" data-astro-cid-ru23m746> <div class="card-body" data-astro-cid-ru23m746> <span data-step-before="03" data-astro-cid-ru23m746></span> <h3 style="font-size: 2rem; line-height: 2rem; font-weight: 700; color: var(--enorganico-secondary-color)" data-astro-cid-ru23m746>El horneado</h3> <p data-astro-cid-ru23m746>Cada Smashwaffle se cocina lentamente hasta alcanzar el punto exacto.</p> <p data-astro-cid-ru23m746>Ni demasiado blando, ni excesivamente seco.</p> <p data-astro-cid-ru23m746>Buscamos ese equilibrio donde el aroma, el color y la textura hablan por sí solos.</p> </div> </div> </div> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible d-lg-block o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1" data-astro-cid-ru23m746> <img src="/web/image/1482-9ff341b5/Seccion-4-3.webp" alt="" data-attachment-id="1481" class="img img-fluid rounded o_we_custom_image" style="max-height: 40vh; object-fit: cover; object-position: center center; height: auto !important;" data-format-mimetype="image/webp" data-original-id="1481" data-original-src="/web/image/1481-715b8345/Seccion-4-3.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" data-astro-cid-ru23m746> </div> </div> <div class="s_timeline_row position-relative d-flex align-items-center gap-md-5 flex-column flex-md-row pb-4" data-name="Milestone" data-astro-cid-ru23m746> <div class="o_grid_item o_grid_item_image o_snippet_mobile_invisible order-1 order-md-0 d-lg-block o_colored_level g-col-lg-4 g-height-8 col-lg-4" style="z-index: 4; grid-area: 4 / 1 / 12 / 5;" data-invisible="1" data-astro-cid-ru23m746> <img src="/web/image/1480-fef8e3e2/Seccion-4-4.webp" alt="" data-attachment-id="1479" class="img img-fluid rounded o_we_custom_image" style="max-height: 40vh; object-fit: cover; object-position: center center; height: auto !important;" data-format-mimetype="image/webp" data-original-id="1479" data-original-src="/web/image/1479-e03aa73c/Seccion-4-4.png" data-mimetype-before-conversion="image/png" data-resize-width="690" data-mimetype="image/webp" data-quality="100" loading="lazy" data-astro-cid-ru23m746> </div> <div class="s_timeline_content w-100 ps-4 ps-md-0" data-astro-cid-ru23m746> <div class="s_timeline_card s_card card my-0 ms-auto o_colored_level text-md-end" style="border-width: 0px !important;" data-vxml="001" data-snippet="s_card" data-name="Milestone Event" data-astro-cid-ru23m746> <div class="card-body" data-astro-cid-ru23m746> <span data-step-before="04" data-astro-cid-ru23m746></span> <h3 style="font-size: 2rem; line-height: 2rem; font-weight: 700; color: var(--enorganico-secondary-color)" data-astro-cid-ru23m746>El toque final</h3> <p data-astro-cid-ru23m746> <strong data-astro-cid-ru23m746>Se sirve recién hecho, solo o acompañado de toppings seleccionados.</strong> </p> <p data-astro-cid-ru23m746>Porque creemos que un buen producto no necesita esconderse detrás de excesos:</p> <p data-astro-cid-ru23m746> <i data-astro-cid-ru23m746>cuando la base es buena, todo lo demás suma.</i> </p> </div> </div> </div> </div> </div> </div> </section> <section id="enorganico-our-coffees" class="s_pricelist_cafe o_colored_level pb104 o_cc o_cc2" data-oe-shape-data="{'shape':'html_builder/Bold/16','flip':[]}" data-snippet="s_pricelist_cafe" data-name="Lista de precios de café" data-astro-cid-w66tnqao>  <div class="container container_pricelist_cafe" data-astro-cid-w66tnqao> <div class="row" data-astro-cid-w66tnqao> <div class="s_pricelist_cafe_col col-lg-5 pt64 o_colored_level o_cc o_cc5" style="background-color: rgba(255, 255, 255, 0);" data-astro-cid-w66tnqao> <h6 style="color: var(--enorganico-secondary-color);" data-astro-cid-w66tnqao>NUESTRO</h6> <h1 style="font-size: 5rem; line-height: 4rem; font-weight: 900; color: var(--enorganico-secondary-color);" data-astro-cid-w66tnqao>CAFE <br data-astro-cid-w66tnqao> ESPRESSO</h1> </div> </div> <div class="row align-items-center" data-astro-cid-w66tnqao> <div class="s_pricelist_cafe_col col-lg-4 pb-5 o_cc o_cc5 s_col_no_resize o_colored_level" style="background-color: rgba(28, 27, 24, 0);" data-astro-cid-w66tnqao> <h3 class="h3-fs" style="color: var(--enorganico-secondary-color);" data-astro-cid-w66tnqao>Entienda el Proceso</h3> <p class="lead" style="color: var(--enorganico-secondary-color);" data-astro-cid-w66tnqao>Tres formas de extraer carácter del café</p> <ul class="list-unstyled my-3" data-astro-cid-w66tnqao> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1495-9c7cfffa/espresso-ristretto.webp" data-astro-cid-w66tnqao> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold" data-astro-cid-w66tnqao>Espresso Ristretto</p> <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small" data-astro-cid-w66tnqao>Más corto, más intenso.</p> <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small" data-astro-cid-w66tnqao>Menos agua, mayor concentración. Perfil profundo, sedoso y con carácter marcado.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1494-3de78fbc/espresso-lungo.webp" data-astro-cid-w66tnqao> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold" data-astro-cid-w66tnqao>Espresso Lungo</p> <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small" data-astro-cid-w66tnqao>Más largo y suave.</p> <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small" data-astro-cid-w66tnqao>Mayor cantidad de agua que resalta notas amargas y prolonga el sabor en boca.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1492-51fd3708/espresso-clasico.webp" data-astro-cid-w66tnqao> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold" data-astro-cid-w66tnqao>Espresso Clásico</p> <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small" data-astro-cid-w66tnqao>Equilibrado y aromático.</p> <p class="s_pricelist_cafe_item_description d-block mt-2 pe-5 o_small" data-astro-cid-w66tnqao>La referencia del café espresso: cuerpo medio, acidez controlada y una crema natural que concentra el sabor.</p> </li> </ul> </div> <div class="s_pricelist_cafe_col col-lg-4 d-lg-block o_snippet_mobile_invisible s_col_no_resize o_colored_level" data-invisible="1" data-astro-cid-w66tnqao> <img class="img img-fluid d-block mx-auto" data-target-image-url="" src="/web/image/1495-9c7cfffa/espresso-ristretto.webp" alt="" loading="lazy" data-mimetype="image/png" data-astro-cid-w66tnqao> </div> <div class="s_pricelist_cafe_col col-lg-4 py-5 o_cc s_col_no_resize o_colored_level o_cc2" data-astro-cid-w66tnqao> <ul class="list-unstyled my-3" data-astro-cid-w66tnqao> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1493-7ed92895/linea-andino.webp" data-astro-cid-w66tnqao> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold" data-astro-cid-w66tnqao>Línea <u data-astro-cid-w66tnqao>Andino</u></p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Origen:</strong> Colombia</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Tueste:</strong> Medio</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Perfil:</strong> Balanceado, notas a chocolate y caramelo</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Ideal para:</strong> Espresso Ristretto</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao>Un café noble y versátil, pensado para quienes buscan equilibrio y suavidad sin perder carácter.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1496-a4a9df4b/linea-athiopia.webp" data-astro-cid-w66tnqao> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold" data-astro-cid-w66tnqao>Línea <u data-astro-cid-w66tnqao>Ethiopia</u></p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Origen:</strong> África Oriental</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Tueste:</strong> Medio–claro</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Perfil:</strong> Redondo, baja acidez, notas dulces</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Ideal para:</strong> Espresso clásico y lungo, donde sus matices se expresan con claridad.</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao>El origen del café, en su forma más pura.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1497-2c65102c/linea-cusco.webp" data-astro-cid-w66tnqao> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold" data-astro-cid-w66tnqao>Línea <u data-astro-cid-w66tnqao>Cusco</u></p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Origen:</strong> Perú</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Tueste:</strong> Medio–oscuro</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Perfil:</strong> Intenso, cuerpo alto, notas tostadas</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao><strong data-astro-cid-w66tnqao>Ideal para:</strong> Espresso clásico y Ristretto</p> <p class="s_pricelist_cafe_item_description d-block text-muted o_small" data-astro-cid-w66tnqao>Granos cultivados en altura que ofrecen profundidad y fuerza. Perfecto para extracciones cortas y potentes.</p> </li> </ul> </div> </div> </div> <script>
-    (function () {
-      "use strict";
 
-      // Esperar a que Odoo cargue el DOM
-      if (typeof $ === "undefined") {
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", init);
+    // Primera imagen visible
+    gsap.set(images[0], { opacity: 1 });
+
+    // Crear ScrollTrigger para controlar la animación
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top 80%",
+      end: "bottom 20%",
+      scrub: 1.5,
+      markers: false, // true para debug
+
+      onUpdate: (self) => {
+        const progress = self.progress;
+
+        // Calcular rotación total continua (de 0 a 360 grados)
+        const totalRotation = progress * TOTAL_ROTATION;
+
+        // Aplicar la misma rotación a todas las imágenes
+        gsap.set(images, {
+          rotation: totalRotation,
+          transformOrigin: "center center",
+        });
+
+        // Aplicar rotación al wrapper también para efecto 3D
+        gsap.set(imageWrapper, {
+          // rotationY: totalRotation * 0.1, // Pequeño efecto 3D
+          transformOrigin: "center center",
+        });
+
+        // Determinar qué imagen mostrar basado en el ángulo de rotación
+        // Cada imagen ocupa 120 grados (360/3)
+        const imageSegment = 120; // Grados por imagen
+        const normalizedRotation = totalRotation % 360;
+
+        // Calcular índice de imagen basado en rotación
+        let activeIndex;
+        let fadeProgress;
+
+        if (normalizedRotation < imageSegment) {
+          activeIndex = 0;
+          fadeProgress = normalizedRotation / imageSegment;
+        } else if (normalizedRotation < imageSegment * 2) {
+          activeIndex = 1;
+          fadeProgress = (normalizedRotation - imageSegment) / imageSegment;
         } else {
-          setTimeout(init, 1000);
-        }
-      } else {
-        $(document).ready(init);
-      }
-
-      function init() {
-        var section = document.getElementById("enorganico-our-coffees");
-        if (!section) {
-          setTimeout(init, 500);
-          return;
+          activeIndex = 2;
+          fadeProgress = (normalizedRotation - imageSegment * 2) / imageSegment;
         }
 
-        var coffeeItems = section.querySelectorAll(".s_pricelist_cafe_item");
-        var targetImage = section.querySelector("img[data-target-image-url]");
+        // Calcular índice de la siguiente imagen
+        const nextIndex = (activeIndex + 1) % images.length;
 
-        if (!targetImage || coffeeItems.length === 0) {
-          return;
-        }
+        // Animar transiciones suaves entre imágenes
+        if (fadeProgress < 0.5) {
+          // La imagen actual está más visible
+          gsap.to(images[activeIndex], {
+            opacity: 1 - fadeProgress * 2, // De 1 a 0 en la primera mitad
+            duration: FADE_DURATION,
+            ease: "power2.out",
+          });
 
-        // Variables de control
-        var currentIndex = 0;
-        var autoRotateInterval;
-        var isUserInteracting = false;
-        var rotationTime = 5000; // 5 segundos
-
-        // Función para activar un item
-        function activateItem(index) {
-          // Remover clase active de todos
-          for (var i = 0; i < coffeeItems.length; i++) {
-            coffeeItems[i].classList.remove("active");
-          }
-
-          // Activar el item seleccionado
-          if (coffeeItems[index]) {
-            coffeeItems[index].classList.add("active");
-
-            // Cambiar imagen
-            var imageUrl = coffeeItems[index].getAttribute("data-image");
-            if (imageUrl && imageUrl !== targetImage.src) {
-              targetImage.style.opacity = "0.5";
-              setTimeout(function () {
-                targetImage.src = imageUrl;
-                targetImage.style.opacity = "1";
-              }, 300);
-            }
-          }
-
-          currentIndex = index;
-        }
-
-        // Función para rotación automática
-        function startAutoRotation() {
-          if (autoRotateInterval) {
-            clearInterval(autoRotateInterval);
-          }
-
-          if (!isUserInteracting) {
-            autoRotateInterval = setInterval(function () {
-              var newIndex;
-              do {
-                newIndex = Math.floor(Math.random() * coffeeItems.length);
-              } while (newIndex === currentIndex && coffeeItems.length > 1);
-
-              activateItem(newIndex);
-            }, rotationTime);
-          }
-        }
-
-        // Añadir eventos a los items
-        for (var i = 0; i < coffeeItems.length; i++) {
-          (function (index) {
-            // Mouse enter
-            coffeeItems[index].addEventListener("mouseenter", function () {
-              isUserInteracting = true;
-              clearInterval(autoRotateInterval);
-              activateItem(index);
+          if (activeIndex === 0) {
+            gsap.to(images[images.length - 1], {
+              opacity: fadeProgress * 2, // La última se vuelve visible
+              duration: FADE_DURATION,
+              ease: "power2.out",
             });
-
-            // Mouse leave
-            coffeeItems[index].addEventListener("mouseleave", function () {
-              isUserInteracting = false;
-              setTimeout(startAutoRotation, 3000);
+          } else {
+            gsap.to(images[activeIndex - 1], {
+              opacity: fadeProgress * 2,
+              duration: FADE_DURATION,
+              ease: "power2.out",
             });
+          }
+        } else {
+          // La siguiente imagen está tomando protagonismo
+          gsap.to(images[activeIndex], {
+            opacity: (1 - fadeProgress) * 2, // De 1 a 0 en la segunda mitad
+            duration: FADE_DURATION,
+            ease: "power2.out",
+          });
 
-            // Touch para móviles
-            coffeeItems[index].addEventListener("touchstart", function (e) {
-              e.preventDefault();
-              isUserInteracting = true;
-              clearInterval(autoRotateInterval);
-              activateItem(index);
-            });
-          })(i);
+          gsap.to(images[nextIndex], {
+            opacity: (fadeProgress - 0.5) * 2, // De 0 a 1 en la segunda mitad
+            duration: FADE_DURATION,
+            ease: "power2.out",
+          });
         }
 
-        // Inicializar
-        setTimeout(function () {
-          activateItem(0);
-          startAutoRotation();
-        }, 1500);
-
-        // Limpiar al salir
-        window.addEventListener("beforeunload", function () {
-          if (autoRotateInterval) {
-            clearInterval(autoRotateInterval);
+        // Actualizar clases para CSS (opcional)
+        images.forEach((img, index) => {
+          if (index === activeIndex || (fadeProgress < 0.5 && index === (activeIndex - 1 + images.length) % images.length) || (fadeProgress >= 0.5 && index === nextIndex)) {
+            img.classList.add("active");
+          } else {
+            img.classList.remove("active");
           }
         });
+      },
+    });
+
+    // Efecto de entrada inicial
+    gsap.from(imageWrapper, {
+      opacity: 0,
+      scale: 0.9,
+      rotationY: -30,
+      duration: 1.5,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 85%",
+        end: "top 70%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  });
+</script> <section id="enorganico-brownie" class="enorganico-brownie relative overflow-hidden pt-[3rem]! pb-[5rem]!"> <div class="container"> <div class="row d-flex align-items-center rounded-2xl overflow-hidden relative h-[40vh] p-3"> <a href="#" class="absolute top-0 left-0 right-0 bottom-0 w-[100%] h-[100%] hover:border hover:border-(--enorganico-secondary-color) z-10"></a> <div class="brownie-is-img col-12 col-md-6 h-[35vh] overflow-hidden rounded-3xl"> <img src="/web/image/1556-aaac57e6/brownie-wood.webp" alt="brownie-infinite-slider" title="Gluten Free Chocolate Brownie" class="img img-fluid object-center object-cover min-h-[150%] will-change-transform"> </div> <div class="brownie-is-content col-12 col-md-6 mt-3 mt-md-0"> <h1 class="display-3 font-black! text-(--enorganico-secondary-color)! opacity-50 leading-1">Gluten-Free Chocolate Brownie</h1> <p>Brownie de chocolate tierno y lleno de sabor, pensado para disfrutarse sin excepciones. Elaborado sin gluten, mantiene una textura suave y reconfortante, ideal para quienes buscan una opción inclusiva sin renunciar al placer. Personalízalo con tus toppings favoritos y hazlo tan especial como tú quieras.</p> <p><strong><u><i>Un placer pensado para todos.</i></u></strong></p> </div> </div> </div> </section> <section id="enorganico-our-coffees" class="s_pricelist_cafe o_colored_level pb104 o_cc o_cc2" data-oe-shape-data="{'shape':'html_builder/Bold/16','flip':[]}" data-snippet="s_pricelist_cafe" data-name="Lista de precios de café"> <div class="container container_pricelist_cafe"> <div class="row"> <div class="s_pricelist_cafe_col col-lg-5 pt64 o_colored_level o_cc o_cc5 bg-transparent"> <h6 class="mb-0 text-(--enorganico-secondary-color)! opacity-50">NUESTRO</h6> <h1 class="text-8xl! font-extrabold! text-(--enorganico-secondary-color)! opacity-50">CAFE</h1> <h6 class="font-bold! text-(--enorganico-secondary-color)! opacity-50">DE ORIGEN 100% COLOMBIANO</h6> </div> </div> <div class="row align-items-center"> <div class="s_pricelist_cafe_col col-lg-4 pb-5 o_cc o_cc5 s_col_no_resize o_colored_level" style="background-color: rgba(28, 27, 24, 0);"> <h3 class="h3-fs" style="color: var(--enorganico-secondary-color);">Maneras de saborear nuestro café</h3> <ul class="list-unstyled my-3"> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1595-95eed0d4/imagen-20.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Americano:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Suave, largo y equilibrado.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1596-8d667ec7/imagen-21.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Black Coffee:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Puro, intenso y sin concesiones.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1599-db0d6955/imagen-22.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Espresso / Double Espresso:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Concentrado, potente y aromático.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1601-50b7992b/imagen-23.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Cappuccino:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Cremoso, balanceado y reconfortante.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1597-7fee589a/imagen-24.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Macchiato:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Intenso con un toque de leche.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1598-fc4223d2/imagen-25.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Latte Macchiato:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Leche caliente con carácter de café.</p> </li> </ul> </div> <div class="s_pricelist_cafe_col col-lg-4 d-lg-block o_snippet_mobile_invisible s_col_no_resize o_colored_level" data-invisible="1"> <img class="img img-fluid d-block mx-auto" data-target-image-url="" src="/web/image/1595-95eed0d4/imagen-20.webp" alt="" loading="lazy" data-mimetype="image/png"> </div> <div class="s_pricelist_cafe_col col-lg-4 py-5 o_cc s_col_no_resize o_colored_level o_cc2"> <ul class="list-unstyled my-3"> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1604-3f2f513a/imagen-26.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Coffee Latte:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Suave, cremoso y perfectamente armonioso.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1605-f7662698/imagen-27.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Vanilla Coffee Latte:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Dulce y aromático y con notas de vainilla.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1600-e74f1d13/imagen-28.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Cinnamon Coffee Latte:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Cálido, especiado y reconfortante.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1602-45335880/imagen-29.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Pistachio Coffee Latte:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Fusión original y perfecta de café con crema de pistacho.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1606-43b07837/imagen-30.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">White/Black Mocha Coffee:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Carácter chocolatoso, intenso e irresistible.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1607-6e8f8196/imagen-31.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Americano:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Caramel Macchiato : Dulce, cremoso y con notas de caramelo.</p> </li> <li class="s_pricelist_cafe_item mb-4 text-o-color-2" data-name="Product" data-image="/web/image/1603-5cc3ade8/imagen-32.webp"> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline fw-bold mb-0">Café Bombón:</p> <p class="s_pricelist_cafe_item_title d-flex align-items-baseline mb-0">Un clásico, dulce en capas perfectas.</p> </li> </ul> </div> </div> </div> </section> <script>
+  (function () {
+    "use strict";
+
+    // Esperar a que Odoo cargue el DOM
+    if (typeof $ === "undefined") {
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+      } else {
+        setTimeout(init, 1000);
       }
-    })();
-  </script> </section> <section id="post" class="enorganico enorganico-post w-full md:h-screen py-10" data-astro-cid-af57yvkp> <div class="container-fluid px-0" data-astro-cid-af57yvkp> <div class="row" data-astro-cid-af57yvkp> <div class="offset-md-1 col-12 col-md-10 offset-md-1" data-astro-cid-af57yvkp> <h2 class="text-base! md:text-2xl! block max-w-[100%] enorganico-text-secondary enorganico-font-weight-blacked m-auto pt-25! text-center uppercase" data-astro-cid-af57yvkp>Ultimos Posts</h2> <ul class="enorganico-post__list d-flex flex-column mt-6 pt-25! px-3 px-md-0" data-astro-cid-af57yvkp> <li class="enorganico-post__list--item list-none" data-astro-cid-af57yvkp> <a href="#" class="enorganico-post__list--item-link text-" data-astro-cid-af57yvkp> <span class="text-start block" data-astro-cid-af57yvkp>Guía definitiva: Cómo pedir tu café en España y acertar siempre</span> <img class="img img-fluid" src="/web/image/1189-0857dc05/gallery-1.webp" alt="gallery-image" data-astro-cid-af57yvkp> </a> </li> <li class="enorganico-post__list--item list-none" data-astro-cid-af57yvkp> <a href="#" class="enorganico-post__list--item-link text-" data-astro-cid-af57yvkp> <span class="text-start block" data-astro-cid-af57yvkp>De la finca a tu taza: El viaje de los granos que usamos para nuestro café exprés.</span> <img class="img img-fluid" src="/web/image/1199-57cb4aaf/gallery-2.webp" alt="gallery-image" data-astro-cid-af57yvkp> </a> </li> <li class="enorganico-post__list--item list-none" data-astro-cid-af57yvkp> <a href="#" class="enorganico-post__list--item-link text-" data-astro-cid-af57yvkp> <span class="text-start block" data-astro-cid-af57yvkp>Más allá del desayuno: 3 momentos del día perfectos para disfrutar de un buen espresso.</span> <img class="img img-fluid" src="/web/image/1205-bc5c8277/gallery-3.webp" alt="gallery-image" data-astro-cid-af57yvkp> </a> </li> <li class="enorganico-post__list--item list-none" data-astro-cid-af57yvkp> <a href="#" class="enorganico-post__list--item-link text-" data-astro-cid-af57yvkp> <span class="text-start block" data-astro-cid-af57yvkp>El arte del barista: 5 razones para tomar tu café en nuestra cafetería y no en casa.</span> <img class="img img-fluid" src="/web/image/1194-d8f3fa7c/gallery-4.webp" alt="gallery-image" data-astro-cid-af57yvkp> </a> </li> <li class="enorganico-post__list--item list-none" data-astro-cid-af57yvkp> <a href="#" class="enorganico-post__list--item-link text-" data-astro-cid-af57yvkp> <span class="text-start block" data-astro-cid-af57yvkp>Expresso y salud: Mitos y verdades sobre el café que (probablemente) no sabías.</span> <img class="img img-fluid" src="/web/image/1209-0775c748/enorganico%201.webp" alt="gallery-image" data-astro-cid-af57yvkp> </a> </li> <li class="enorganico-post__list--item list-none" data-astro-cid-af57yvkp> <a href="#" class="enorganico-post__list--item-link text-" data-astro-cid-af57yvkp> <span class="text-start block" data-astro-cid-af57yvkp>¿Por qué el café de especialidad de tu barrio sabe mejor? El secreto detrás de nuestro espresso.</span> <img class="img img-fluid" src="/web/image/1192-b702b0a2/gallery-7.webp" alt="gallery-image" data-astro-cid-af57yvkp> </a> </li> </ul> </div> </div> </div> </section>   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script> <script type="module">document.addEventListener("DOMContentLoaded",()=>{const r="https://enorganico.odoo.com/";document.querySelectorAll("[src], [href]").forEach(e=>{if(e.hasAttribute("src")){const t=e.getAttribute("src");(t.startsWith("/web")||t.startsWith("/shop"))&&e.setAttribute("src",r+t.replace(/^\//,""))}if(e.hasAttribute("href")){const t=e.getAttribute("href");(t.startsWith("/web")||t.startsWith("/shop"))&&e.setAttribute("href",r+t.replace(/^\//,""))}})});</script> </body> </html>
+    } else {
+      $(document).ready(init);
+    }
+
+    function init() {
+      var section = document.getElementById("enorganico-our-coffees");
+      if (!section) {
+        setTimeout(init, 500);
+        return;
+      }
+
+      var coffeeItems = section.querySelectorAll(".s_pricelist_cafe_item");
+      var targetImage = section.querySelector("img[data-target-image-url]");
+
+      if (!targetImage || coffeeItems.length === 0) {
+        return;
+      }
+
+      // Variables de control
+      var currentIndex = 0;
+      var autoRotateInterval;
+      var isUserInteracting = false;
+      var rotationTime = 5000; // 5 segundos
+
+      // Función para activar un item
+      function activateItem(index) {
+        // Remover clase active de todos
+        for (var i = 0; i < coffeeItems.length; i++) {
+          coffeeItems[i].classList.remove("active");
+        }
+
+        // Activar el item seleccionado
+        if (coffeeItems[index]) {
+          coffeeItems[index].classList.add("active");
+
+          // Cambiar imagen
+          var imageUrl = coffeeItems[index].getAttribute("data-image");
+          if (imageUrl && imageUrl !== targetImage.src) {
+            targetImage.style.opacity = "0.5";
+            setTimeout(function () {
+              targetImage.src = imageUrl;
+              targetImage.style.opacity = "1";
+            }, 300);
+          }
+        }
+
+        currentIndex = index;
+      }
+
+      // Función para rotación automática
+      function startAutoRotation() {
+        if (autoRotateInterval) {
+          clearInterval(autoRotateInterval);
+        }
+
+        if (!isUserInteracting) {
+          autoRotateInterval = setInterval(function () {
+            var newIndex;
+            do {
+              newIndex = Math.floor(Math.random() * coffeeItems.length);
+            } while (newIndex === currentIndex && coffeeItems.length > 1);
+
+            activateItem(newIndex);
+          }, rotationTime);
+        }
+      }
+
+      // Añadir eventos a los items
+      for (var i = 0; i < coffeeItems.length; i++) {
+        (function (index) {
+          // Mouse enter
+          coffeeItems[index].addEventListener("mouseenter", function () {
+            isUserInteracting = true;
+            clearInterval(autoRotateInterval);
+            activateItem(index);
+          });
+
+          // Mouse leave
+          coffeeItems[index].addEventListener("mouseleave", function () {
+            isUserInteracting = false;
+            setTimeout(startAutoRotation, 3000);
+          });
+
+          // Touch para móviles
+          coffeeItems[index].addEventListener("touchstart", function (e) {
+            e.preventDefault();
+            isUserInteracting = true;
+            clearInterval(autoRotateInterval);
+            activateItem(index);
+          });
+        })(i);
+      }
+
+      // Inicializar
+      setTimeout(function () {
+        activateItem(0);
+        startAutoRotation();
+      }, 1500);
+
+      // Limpiar al salir
+      window.addEventListener("beforeunload", function () {
+        if (autoRotateInterval) {
+          clearInterval(autoRotateInterval);
+        }
+      });
+    }
+  })();
+</script> <section id="enorganico-matcha" class="enorganico enorganico-matcha py-[5rem]!"> <div class="container d-none d-md-block"> <div class="row"> <div class="col-12"> <div class="card-header text-center"> <h2 class="uppercase text-lg! text-(--enorganico-primary-color)!">Nuestro</h2> <h1 class="text-7xl! uppercase font-black! text-(--enorganico-secondary-color)! opacity-50">Matcha <br> Ecologico</h1> <p class="uppercase text-(--enorganico-primary-color)">Más que una bebida: un ritual consciente.</p> </div> </div> <div class="col-12 min-h-[60vh]"> <div class="card-slider relative h-100"> <div class="nav h-100 w-100 absolute top-0 left-0 right-0 bottom-0"> <div class="prev absolute top-0 left-0 w-[100px] h-[100px] bg-(--enorganico-primary-color) flex justify-center items-center cursor-pointer"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 scale-200"> <path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clip-rule="evenodd"></path> </svg> </div> <div class="next absolute bottom-0 right-0 w-[100px] h-[100px] bg-(--enorganico-primary-color) flex justify-center items-center cursor-pointer"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 scale-200"> <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd"></path> </svg> </div> </div> <div class="items relative w-100 h-10"> <div class="item flex justify-center items-center absolute mt-[5rem]!"> <h1 class="title w-[calc(100%/3)] text-end uppercase text-6xl! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Matcha<br>Latte<br>Classic</h1> <div class="matcha-card w-[calc(100%/3)]"> <img src="/web/image/1637-9b8d4b05/imagen-34.webp" alt="Matcha Latte Classic" class="img img-fluid card-bg m-auto w-50"> </div> <div class="content w-[calc(100%/3)]"> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item flex justify-center items-center absolute mt-[5rem]!"> <h1 class="title w-[calc(100%/3)] text-end uppercase text-6xl! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Vanilla<br>Matcha<br>Latte</h1> <div class="matcha-card w-[calc(100%/3)]"> <img src="/web/image/1639-c20218c8/imagen-35.webp" alt="Vanilla Matcha Latte" class="img img-fluid card-bg m-auto w-50"> </div> <div class="content w-[calc(100%/3)]"> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item flex justify-center items-center absolute mt-[5rem]!"> <h1 class="title w-[calc(100%/3)] text-end uppercase text-6xl! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Pistaccio<br>Matcha<br>Latte</h1> <div class="matcha-card w-[calc(100%/3)]"> <img src="/web/image/1641-0fc0ee98/imagen-36.webp" alt="Pistaccio Matcha Latte" class="img img-fluid card-bg m-auto w-50"> </div> <div class="content w-[calc(100%/3)]"> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item flex justify-center items-center absolute mt-[5rem]!"> <h1 class="title w-[calc(100%/3)] text-end uppercase text-6xl! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Cinnamon<br>Matcha<br>Latte</h1> <div class="matcha-card w-[calc(100%/3)]"> <img src="/web/image/1638-68575722/imagen-37.webp" alt="Cinnamon Matcha Latte" class="img img-fluid card-bg m-auto w-50"> </div> <div class="content w-[calc(100%/3)]"> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item flex justify-center items-center absolute mt-[5rem]!"> <h1 class="title w-[calc(100%/3)] text-end uppercase text-6xl! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Coconut<br>Matcha<br>Latte</h1> <div class="matcha-card w-[calc(100%/3)]"> <img src="/web/image/1640-8f816775/imagen-38.webp" alt="Coconut Matcha Latte" class="img img-fluid card-bg m-auto w-50"> </div> <div class="content w-[calc(100%/3)]"> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> </div> </div> </div> </div> </div> <div class="container d-block d-md-none"> <div class="row"> <div class="col-12"> <div class="card-header text-center"> <h2 class="uppercase text-lg! text-(--enorganico-primary-color)!">Nuestro</h2> <h1 class="text-7xl! uppercase font-black! text-(--enorganico-primary-color)!">Matcha <br> Ecologico</h1> <p class="uppercase text-(--enorganico-primary-color)">Más que una bebida: un ritual consciente.</p> </div> </div> </div> <div class="row"> <div class="items-mobile relative w-100 h-10"> <div class="item-mobile flex justify-center items-center mt-[5rem]!"> <div class="matcha-card w-[calc(100%/2)]"> <img src="/web/image/1637-9b8d4b05/imagen-34.webp" alt="Matcha Latte Classic" class="img img-fluid card-bg m-auto w-75"> </div> <div class="content w-[calc(100%/2)] pl-3"> <h1 class="title text-start uppercase text-lg! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Matcha Latte Classic</h1> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item-mobile flex justify-center items-center mt-[5rem]!"> <div class="matcha-card w-[calc(100%/2)]"> <img src="/web/image/1639-c20218c8/imagen-35.webp" alt="Vanilla Matcha Latte" class="img img-fluid card-bg m-auto w-75"> </div> <div class="content w-[calc(100%/2)] pl-3"> <h1 class="title text-start uppercase text-lg! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Vanilla Matcha Latte</h1> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item-mobile flex justify-center items-center mt-[5rem]!"> <div class="matcha-card w-[calc(100%/2)]"> <img src="/web/image/1641-0fc0ee98/imagen-36.webp" alt="Pistaccio Matcha Latte" class="img img-fluid card-bg m-auto w-75"> </div> <div class="content w-[calc(100%/2)] pl-3"> <h1 class="title text-start uppercase text-lg! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Pistaccio Matcha Latte</h1> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item-mobile flex justify-center items-center mt-[5rem]!"> <div class="matcha-card w-[calc(100%/2)]"> <img src="/web/image/1638-68575722/imagen-37.webp" alt="Cinnamon Matcha Latte" class="img img-fluid card-bg m-auto w-75"> </div> <div class="content w-[calc(100%/2)] pl-3"> <h1 class="title text-start uppercase text-lg! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Cinnamon Matcha Latte</h1> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> <div class="item-mobile flex justify-center items-center mt-[5rem]!"> <div class="matcha-card w-[calc(100%/2)]"> <img src="/web/image/1640-8f816775/imagen-38.webp" alt="Coconut Matcha Latte" class="img img-fluid card-bg m-auto w-75"> </div> <div class="content w-[calc(100%/2)] pl-3"> <h1 class="title text-start uppercase text-lg! text-shadow-[1px 1px 0px white] text-(--enorganico-primary-color)!">Coconut Matcha Latte</h1> <p><strong>Cremoso, suave y perfectamente equilibrado.</strong></p> <p>Nuestro matcha en su forma más pura. Cremoso, suave y balanceado, con notas vegetales limpias y un final reconfortante. Ideal para quienes buscan energía estable y sabor auténtico, sin artificios.</p> </div> </div> </div> </div> </div> </section> <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".card-slider");
+    const items = document.querySelectorAll(".card-slider .item");
+    const prevBtn = document.querySelector(".card-slider .prev");
+    const nextBtn = document.querySelector(".card-slider .next");
+    const navButtons = document.querySelectorAll(".card-slider .nav div");
+
+    let currentIndex = 0;
+    let isAnimating = false;
+    const totalItems = items.length;
+
+    // Inicializar: mostrar solo el primer item
+    items.forEach((item, index) => {
+      if (index === 0) {
+        gsap.set(item, {
+          display: "flex",
+          opacity: 1,
+          x: 0,
+        });
+        item.classList.add("is-active");
+      } else {
+        gsap.set(item, {
+          display: "flex",
+          opacity: 0,
+          x: 100,
+        });
+      }
+    });
+
+    // Función para cambiar slide con animación
+    function goToSlide(index, direction = "next") {
+      if (isAnimating || index === currentIndex) return;
+
+      isAnimating = true;
+      const oldIndex = currentIndex;
+      currentIndex = index;
+
+      // Determinar dirección de la animación
+      const fromX = direction === "next" ? 100 : -100;
+      const toX = direction === "next" ? -100 : 100;
+
+      // Crear timeline para animaciones sincronizadas
+      const tl = gsap.timeline({
+        defaults: { duration: 0.8, ease: "power2.inOut" },
+        onComplete: () => {
+          isAnimating = false;
+
+          // Remover clase is-active de todos
+          items.forEach((item) => item.classList.remove("is-active"));
+          // Agregar clase is-active al slide actual
+          items[currentIndex].classList.add("is-active");
+        },
+      });
+
+      // Animar salida del slide actual
+      tl.to(
+        items[oldIndex],
+        {
+          x: toX,
+          opacity: 0,
+          onComplete: () => {
+            gsap.set(items[oldIndex], { x: 0 });
+          },
+        },
+        0
+      );
+
+      // Animar entrada del nuevo slide
+      tl.fromTo(items[currentIndex], { x: fromX, opacity: 0 }, { x: 0, opacity: 1 }, 0.2);
+
+      // Añadir efecto parallax sutil a los elementos internos
+      const title = items[currentIndex].querySelector(".title");
+      const image = items[currentIndex].querySelector(".matcha-card img");
+      const content = items[currentIndex].querySelector(".content");
+
+      if (title && image && content) {
+        tl.from(
+          title,
+          {
+            x: fromX * 1.5,
+            opacity: 0,
+            duration: 0.6,
+          },
+          0.3
+        );
+
+        tl.from(
+          image,
+          {
+            scale: 0.8,
+            opacity: 0,
+            duration: 0.7,
+            ease: "back.out(1.2)",
+          },
+          0.4
+        );
+
+        tl.from(
+          content,
+          {
+            x: fromX * 1.5,
+            opacity: 0,
+            duration: 0.6,
+          },
+          0.5
+        );
+      }
+    }
+
+    // Función para ir al siguiente slide
+    function nextSlide() {
+      const nextIndex = (currentIndex + 1) % totalItems;
+      goToSlide(nextIndex, "next");
+    }
+
+    // Función para ir al slide anterior
+    function prevSlide() {
+      const prevIndex = (currentIndex - 1 + totalItems) % totalItems;
+      goToSlide(prevIndex, "prev");
+    }
+
+    // Event listeners para botones de navegación
+    prevBtn.addEventListener("click", prevSlide);
+    nextBtn.addEventListener("click", nextSlide);
+
+    // Navegación por teclado
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") {
+        prevSlide();
+      } else if (e.key === "ArrowRight") {
+        nextSlide();
+      }
+    });
+
+    // Auto-play opcional (descomentar si lo quieres)
+    let autoPlayInterval;
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+
+    // Iniciar auto-play
+    startAutoPlay();
+
+    // Pausar auto-play al interactuar
+    slider.addEventListener("mouseenter", stopAutoPlay);
+    slider.addEventListener("mouseleave", startAutoPlay);
+    navButtons.forEach((btn) => {
+      btn.addEventListener("mouseenter", stopAutoPlay);
+    });
+
+    // Efecto hover en botones de navegación
+    navButtons.forEach((btn) => {
+      btn.addEventListener("mouseenter", function () {
+        gsap.to(this, {
+          scale: 1.1,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+
+        // Efecto de brillo en el icono
+        const svg = this.querySelector("svg");
+        if (svg) {
+          gsap.to(svg, {
+            scale: 2.2,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        }
+      });
+
+      btn.addEventListener("mouseleave", function () {
+        gsap.to(this, {
+          scale: 1,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+
+        const svg = this.querySelector("svg");
+        if (svg) {
+          gsap.to(svg, {
+            scale: 2,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        }
+      });
+    });
+
+    // Inicializar ScrollTrigger para efectos de entrada
+    if (typeof ScrollTrigger !== "undefined") {
+      // Efecto de entrada para toda la sección
+      gsap.from("#enorganico-matcha .card-header", {
+        scrollTrigger: {
+          trigger: "#enorganico-matcha",
+          start: "top 80%",
+          end: "bottom 20%",
+          toggleActions: "play none none reverse",
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+      });
+
+      // Efecto de entrada para el slider
+      gsap.from(".card-slider", {
+        scrollTrigger: {
+          trigger: ".card-slider",
+          start: "top 75%",
+          end: "bottom 25%",
+          toggleActions: "play none none reverse",
+        },
+        y: 30,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.3,
+        ease: "power2.out",
+      });
+    }
+
+    // Función para pre-cargar imágenes (mejora rendimiento)
+    function preloadImages() {
+      items.forEach((item) => {
+        const img = item.querySelector("img");
+        if (img && img.src) {
+          const image = new Image();
+          image.src = img.src;
+        }
+      });
+    }
+
+    // Pre-cargar imágenes
+    preloadImages();
+  });
+</script>  <!-- Green Sock animation platform --> <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!-- ScrollTrigger Plugin --> <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> <!-- CSS de Bootstrap --> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- JS de Bootstrap (con Popper incluido) --> <script type="module">window.location.hostname==="localhost"&&document.addEventListener("DOMContentLoaded",()=>{const o="https://enorganico.odoo.com";document.querySelectorAll('img[src^="/web/"], img[src^="/shop/"]').forEach(e=>{e.src=o+e.getAttribute("src")}),document.querySelectorAll('a[href^="/web/"], a[href^="/shop/"]').forEach(e=>{e.href=o+e.getAttribute("href")})});</script> <!-- Transformar rutas Odoo solo en desarrollo --> <script type="module" src="/enorganico/assets/Layout.astro_astro_type_script_index_1_lang.DfRauhE5.js"></script> </body> </html>
