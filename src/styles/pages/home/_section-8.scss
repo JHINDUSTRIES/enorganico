@@ -1,74 +1,9 @@
-.enorganico {
-  &-post {
-    &__list {
-      &--item {
-        border-top: 1px solid var(--enorganico-dark-color);
-
-        &:last-child {
-          border-bottom: 1px solid var(--enorganico-dark-color);
-        }
-
-        &-link {
-          padding: 2rem 0;
-          text-decoration: none;
-          position: relative;
-          display: block;
-          color: var(--enorganico-secondary-color);
-          font-weight: var(--enorganico-font-weight-medium);
-          text-transform: uppercase;
-
-          &::before {
-            content: url("/web/image/1161-c6080e7c/link-out.svg");
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translateY(-50%);
-            width: 25px;
-            height: auto;
-            opacity: 1;
-            fill: var(--enorganico-secondary-color);
-
-            @media screen and (max-width: 768px) {
-              display: none;
-            }
-          }
-
-          &:hover {
-            @media screen and (min-width: 768px) {
-              img {
-                position: absolute;
-                left: 85%;
-                height: 50%;
-                transform: translate(-75%, -50%);
-                opacity: 1;
-                height: auto;
-                min-height: 350px;
-              }
-            }
-          }
-
-          img {
-            opacity: 0;
-            transition: ease-in-out 0.3s all;
-            width: auto;
-            max-width: 100%;
-            min-width: 350px;
-            height: 0;
-            object-fit: cover;
-            object-position: center;
-            z-index: 999;
-
-            @media screen and (max-width: 768px) {
-              width: calc(100% - 10px);
-              height: 100px;
-              border-radius: 1rem;
-              overflow: hidden;
-              opacity: 1;
-              margin-top: 1rem;
-            }
-          }
-        }
-      }
-    }
+#enorganico-matcha {
+  .title {
+    text-shadow: 2px 1px 0px white;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 3px;
   }
 }

@@ -21,9 +21,14 @@
 @use 'pages/home/section-5';
 @use 'pages/home/section-6';
 @use 'pages/home/section-7';
+@use 'pages/home/section-8';
 
 // Themes
 @use "themes/enorganico";
+
+// Utilities
+@use "utilities/font-anton-sc";
+
 
 // Vendors
 @use "vendors/odoo";
