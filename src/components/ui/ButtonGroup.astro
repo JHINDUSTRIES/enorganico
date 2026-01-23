@@ -1,0 +1,104 @@
+---
+// src/components/ui/ButtonGroup.astro
+
+export interface Props {
+  children: any;
+  className?: string;
+  direction?: "horizontal" | "vertical";
+}
+
+// CASOS DE USO DEL COMPONENTE BUTTONGROUP
+// ========================================
+
+// 1. Grupo horizontal básico (default)
+// <ButtonGroup>
+//   <Button variant="primary" text="Aceptar" />
+//   <Button variant="outline-primary" text="Cancelar" />
+// </ButtonGroup>
+//
+// 2. Grupo vertical
+// <ButtonGroup direction="vertical">
+//   <Button variant="primary" text="Opción 1" />
+//   <Button variant="primary" text="Opción 2" />
+//   <Button variant="primary" text="Opción 3" />
+// </ButtonGroup>
+//
+// 3. Grupo con clase personalizada
+// <ButtonGroup className="mi-grupo-personalizado">
+//   <Button variant="primary" text="Sí" />
+//   <Button variant="secondary" text="No" />
+// </ButtonGroup>
+//
+// 4. Grupo de navegación (pagination, steps, etc.)
+// <ButtonGroup>
+//   <Button variant="outline-primary" icon="arrow-left" iconPosition="left" text="Anterior" />
+//   <Button variant="ghost" text="1" />
+//   <Button variant="primary" text="2" active={true} />
+//   <Button variant="ghost" text="3" />
+//   <Button variant="outline-primary" icon="arrow-right" text="Siguiente" />
+// </ButtonGroup>
+//
+// 5. Grupo de acciones de formulario
+// <ButtonGroup>
+//   <Button type="submit" variant="primary" icon="check" text="Guardar" />
+//   <Button type="reset" variant="outline-primary" text="Restablecer" />
+//   <Button variant="ghost" text="Cancelar" />
+// </ButtonGroup>
+//
+// 6. Grupo de filtros/tags
+// <ButtonGroup>
+//   <Button variant="primary" active={true} text="Todos" />
+//   <Button variant="outline-primary" text="Activos" />
+//   <Button variant="outline-primary" text="Inactivos" />
+//   <Button variant="outline-primary" text="Archivados" />
+// </ButtonGroup>
+//
+// 7. Grupo con botones de diferentes tamaños
+// <ButtonGroup>
+//   <Button size="small" variant="primary" text="Pequeño" />
+//   <Button size="medium" variant="primary" text="Medio" />
+//   <Button size="large" variant="primary" text="Grande" />
+// </ButtonGroup>
+//
+// 8. Grupo con botones deshabilitados
+// <ButtonGroup>
+//   <Button variant="primary" text="Habilitado" />
+//   <Button variant="primary" disabled={true} text="Deshabilitado" />
+//   <Button variant="primary" loading={true} text="Cargando" />
+// </ButtonGroup>
+//
+// 9. Grupo de icon buttons (sin texto)
+// <ButtonGroup>
+//   <Button variant="ghost" icon="chevron-left" />
+//   <Button variant="ghost" icon="plus" />
+//   <Button variant="ghost" icon="minus" />
+//   <Button variant="ghost" icon="chevron-right" />
+// </ButtonGroup>
+//
+// 10. Grupo complejo con diferentes variantes
+// <ButtonGroup>
+//   <Button variant="primary" icon="shopping-cart" text="Comprar" />
+//   <Button variant="outline-secondary" icon="heart" text="Guardar" />
+//   <Button variant="ghost" icon="share" text="Compartir" />
+// </ButtonGroup>
+
+// PROPS DISPONIBLES:
+// ------------------
+// children: any           - Contenido del grupo (botones)
+// className?: string      - Clases CSS adicionales
+// direction?: string     - "horizontal" | "vertical" (default: "horizontal")
+
+// NOTAS IMPORTANTES:
+// ------------------
+// 1. ButtonGroup solo afecta el layout, no los estilos de los botones
+// 2. Los botones dentro mantienen todas sus props individuales
+// 3. El spacing se controla con CSS variables en los estilos SCSS
+// 4. Se usa :has() selector con fallback para navegadores antiguos
+// 5. Perfecto para: formularios, paginación, filtros, grupos de acciones
+
+const { children, className = "", direction = "horizontal" } = Astro.props;
+---
+
+<div class={`button-group ${direction === "vertical" ? "button-group-vertical" : ""} ${className}`}>
+  <slot />
+</div>

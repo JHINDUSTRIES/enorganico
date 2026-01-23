@@ -1,0 +1,209 @@
+---
+// src/components/ui/Button.astro
+
+// CASOS DE USO DEL COMPONENTE BUTTON
+// ===================================
+
+// 1. Botón primario básico (enlace)
+// <Button href="/inicio" text="Ir al inicio" />
+//
+// 2. Botón secundario básico
+// <Button variant="secondary" text="Cancelar" onClick={handleCancel} />
+//
+// 3. Botón con icono a la derecha (caso más común)
+// <Button href="/tienda" variant="primary" icon="arrow-right">Comprar ahora</Button>
+//
+// 4. Botón con icono a la izquierda
+// <Button variant="primary" icon="shopping-cart" iconPosition="left">Añadir al carrito</Button>
+//
+// 5. Botón outline
+// <Button variant="outline-primary" text="Ver detalles" />
+//
+// 6. Botón pequeño
+// <Button size="small" variant="primary" text="Editar" />
+//
+// 7. Botón grande
+// <Button size="large" variant="primary" icon="check">Confirmar pedido</Button>
+//
+// 8. Botón loading (estado de carga)
+// <Button loading={true} variant="primary">Procesando...</Button>
+//
+// 9. Botón deshabilitado
+// <Button disabled={true} variant="primary" text="Agotado" />
+//
+// 10. Botón con enlace externo
+// <Button href="https://ejemplo.com" variant="primary" target="_blank" icon="external-link">Visitar sitio</Button>
+//
+// 11. Botón ghost (sin fondo)
+// <Button variant="ghost" text="Ver más" />
+//
+// 12. Botón activo (para estados toggle)
+// <Button active={true} variant="primary" text="Seleccionado" />
+//
+// 13. Botón con clase personalizada adicional
+// <Button variant="primary" className="mi-clase-personalizada" text="Personalizado" />
+//
+// 14. Botón submit en formulario
+// <Button type="submit" variant="primary" text="Enviar formulario" />
+//
+// 15. Botón con children en lugar de text prop
+// <Button variant="primary">
+//   <strong>Texto</strong> con <em>HTML</em>
+// </Button>
+//
+// 16. Botón con múltiples iconos disponibles
+// Iconos soportados: arrow-right, arrow-left, shopping-cart, external-link,
+// chevron-right, chevron-left, plus, minus, check, x-mark
+
+// PROPS DISPONIBLES:
+// ------------------
+// text?: string            - Texto del botón (alternativa a children)
+// children?: any           - Contenido del botón (puede incluir HTML)
+// href?: string            - URL para enlaces (si no hay, es button)
+// onClick?: () => void     - Función al hacer click (solo para button)
+// variant?: string         - "primary" | "secondary" | "outline-primary" | "outline-secondary" | "ghost"
+// size?: string           - "small" | "medium" | "large"
+// icon?: string           - Nombre del icono (ver lista arriba)
+// iconPosition?: string   - "left" | "right" (default: "right")
+// disabled?: boolean      - Estado deshabilitado
+// loading?: boolean       - Estado de carga (muestra spinner)
+// active?: boolean        - Estado activo (para toggle)
+// className?: string      - Clases CSS adicionales
+// type?: string          - "button" | "submit" | "reset" (solo para button)
+// target?: string        - "_blank" | "_self" (solo para enlaces)
+// rel?: string           - Atributo rel (solo para enlaces)
+
+// Tipos explícitos
+type VariantType = "primary" | "secondary" | "outline-primary" | "outline-secondary" | "ghost";
+type SizeType = "small" | "medium" | "large";
+
+export interface Props {
+  children?: any;
+  text?: string;
+  href?: string;
+  onClick?: () => void;
+  variant?: VariantType;
+  size?: SizeType;
+  icon?: string;
+  iconPosition?: "left" | "right";
+  disabled?: boolean;
+  loading?: boolean;
+  active?: boolean;
+  className?: string;
+  type?: "button" | "submit" | "reset";
+  target?: "_blank" | "_self";
+  rel?: string;
+}
+
+const { children, text, href, onClick, variant = "primary", size = "medium", icon, iconPosition = "right", disabled = false, loading = false, active = false, className = "", type = "button", target = "_self", rel } = Astro.props;
+
+// Determinar si tiene icono
+const hasIcon = !!icon;
+
+// Clases base comunes
+const baseClasses = ["button", active && "active", loading && "button-loading", hasIcon && "button-icon"];
+
+// Mapeo de variantes a clases CSS
+const variantClasses = {
+  primary: ["button-primary"],
+  secondary: ["button-secondary"],
+  "outline-primary": ["button-outline", "button-primary"],
+  "outline-secondary": ["button-outline", "button-secondary"],
+  ghost: ["button-ghost"],
+};
+
+// Mapeo de tamaños
+const sizeClasses = {
+  small: ["button-small"],
+  medium: [], // Tamaño por defecto, no necesita clase extra
+  large: ["button-large"],
+};
+
+// Iconos mapeados
+const iconMap: Record<string, string> = {
+  "arrow-right": `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+    </svg>`,
+  "arrow-left": `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+    </svg>`,
+  "shopping-cart": `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+    </svg>`,
+  "external-link": `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+    </svg>`,
+  "chevron-right": `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+    </svg>`,
+  "chevron-left": `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+    </svg>`,
+  plus: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>`,
+  minus: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+    </svg>`,
+  check: `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+    </svg>`,
+  "x-mark": `
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>`,
+};
+
+// Construir clases finales
+const buttonClasses = [...baseClasses, ...variantClasses[variant as VariantType], ...sizeClasses[size as SizeType], className].filter(Boolean).join(" ");
+
+// Obtener SVG del icono
+const iconSvg = icon && iconMap[icon] ? iconMap[icon] : "";
+
+// Determinar si es enlace
+const isLink = !!href && !disabled && !loading;
+---
+
+{/* EJEMPLOS PARA PEGAR EN TU ARCHIVO DE DEMO/PRUEBAS */}
+{
+  /* 
+  <Button href="/inicio" text="Ir al inicio" />
+  <Button variant="secondary" text="Cancelar" />
+  <Button href="/tienda" variant="primary" icon="arrow-right">Comprar ahora</Button>
+  <Button variant="primary" icon="shopping-cart" iconPosition="left">Añadir al carrito</Button>
+  <Button variant="outline-primary" text="Ver detalles" />
+  <Button size="small" variant="primary" text="Editar" />
+  <Button size="large" variant="primary" icon="check">Confirmar pedido</Button>
+  <Button loading={true} variant="primary">Procesando...</Button>
+  <Button disabled={true} variant="primary" text="Agotado" />
+*/
+}
+
+{
+  isLink ? (
+    <a href={href} class={buttonClasses} target={target} rel={rel || (target === "_blank" ? "noopener noreferrer" : undefined)} aria-disabled={disabled || loading}>
+      {hasIcon && iconPosition === "left" && iconSvg && <span class="button-icon-element" set:html={iconSvg} />}
+
+      <span class="button-text">{loading ? "Cargando..." : children || text}</span>
+
+      {hasIcon && iconPosition === "right" && iconSvg && <span class="button-icon-element" set:html={iconSvg} />}
+    </a>
+  ) : (
+    <button type={type} class={buttonClasses} onClick={onClick} disabled={disabled || loading} aria-busy={loading}>
+      {hasIcon && iconPosition === "left" && iconSvg && <span class="button-icon-element" set:html={iconSvg} />}
+
+      <span class="button-text">{loading ? "Cargando..." : children || text}</span>
+
+      {hasIcon && iconPosition === "right" && iconSvg && <span class="button-icon-element" set:html={iconSvg} />}
+    </button>
+  )
+}
