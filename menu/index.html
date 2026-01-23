@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/png" href="../../public/logo_enorganico_transparent.png"><meta name="generator" content="Astro v5.16.10"><title>Enorgánico - Preview Odoo</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet"><link rel="stylesheet" href="/enorganico/assets/index.yTnYAKyE.css"></head> <body class="overflow-x-hidden">  <section id="enorganico-carta-hero" class="enorganico-carta-hero pt-[7rem]! pb-[5rem]! bg-white"> <div class="container-fluid"> <div class="row flex items-center"> <div class="col-12 offset-md-1 col-md-6 main-title"> <h1 class="text-6xl! font-black! uppercase w-75">
+Tres cartas, una misma experiencia <br> <span id="animated-word"> Enorganico </span> </h1> <p class="w-75">Explora nuestra selección de bebidas de café calientes y frías, creaciones a base de té matcha y una carta de panadería artesanal con croissants, waffles y más. Tres formas de disfrutar sabores naturales, frescos y pensados para cada momento del día.</p> <div class="button-group  ">  <a href="#enorganico-carta-cartas" class="button button-icon button-primary" target="_self" aria-disabled="false"><span class="button-text">Ver Cartas</span><span class="button-icon-element">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+    </svg></span></a> <a href="/shop" class="button button-icon button-secondary" target="_self" aria-disabled="false"><span class="button-icon-element">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+    </svg></span><span class="button-text">Comprar Ahora</span></a>  </div> </div> <div class="col-12 offset-md-1 col-md-4 main-title"> <!-- Contenedor de imágenes --> <div class="relative"> <!-- Imagen 1: Café --> <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100 flex items-center justify-between" data-slide="0"> <img src="https://enorganico.odoo.com/web/image/1683-bbe4311e/imagen-28.webp" alt="productos-cafe" class="w-[250px]! h-[250px]! object-cover object-center overflow-hidden"> </div> <!-- Imagen 2: Panadería --> <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 flex items-center justify-between" data-slide="1"> <img src="https://enorganico.odoo.com/web/image/1700-2a1541c6/imagen-2.webp" alt="productos-panaderia" class="w-[250px]! h-[250px]! object-cover object-center overflow-hidden"> </div> <!-- Imagen 3: Matcha --> <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 flex items-center justify-between" data-slide="2"> <img src="https://enorganico.odoo.com/web/image/1638-68575722/imagen-37.webp" alt="productos-matcha" class="w-[250px]! h-[250px]! object-cover object-center overflow-hidden"> </div> </div> </div> </div> </div> </section> <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    const animatedWord = document.getElementById("animated-word");
+
+    let currentSlide = 0;
+    let slideInterval;
+    const totalSlides = slides.length;
+    const slideDuration = 5000;
+
+    const colorClasses = ["text-(--enorganico-primary-color)!", "text-(--enorganico-secondary-color)!", "text-(--enorganico-menu-matcha)!"];
+
+    function animateTextLetters(colorClass) {
+      animatedWord.innerHTML = "";
+
+      const letters = "Enorganico".split("");
+
+      letters.forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+
+        span.className = `inline-block text-8xl! font-black! uppercase ${colorClass}`;
+        span.style.animation = "letterRise 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards";
+        span.style.animationDelay = `${index * 0.05}s`;
+        span.style.opacity = "0";
+
+        animatedWord.appendChild(span);
+      });
+    }
+
+    function goToSlide(slideIndex) {
+      if (slideIndex < 0 || slideIndex >= totalSlides) return;
+
+      slides[currentSlide].classList.remove("opacity-100");
+      slides[currentSlide].classList.add("opacity-0");
+
+      currentSlide = slideIndex;
+
+      slides[currentSlide].classList.remove("opacity-0");
+      slides[currentSlide].classList.add("opacity-100");
+
+      animateTextLetters(colorClasses[currentSlide]);
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % totalSlides;
+      goToSlide(nextIndex);
+    }
+
+    function startSlideInterval() {
+      slideInterval = setInterval(nextSlide, slideDuration);
+    }
+
+    goToSlide(0);
+    startSlideInterval();
+  });
+</script> <section id="enorganico-carta-cartas" class="enorganico-carta-cartas py-[5rem]!"> <div class="container"> <div class="row"> <div class="col-12 col-md-4 gap-1 gap-md-0 text-center!"> <div class="carta-card relative hover:scale-105! shadow-md transition hover:shadow-lg rounded-2xl overflow-hidden"> <a href="/enorganico/assets/Coffee%20Menu%20%C2%B7%20Enorganico.CI-ijr8_.pdf" download class="absolute top-0 right-0 left-0 bottom-0 w-full h-full decoration-0" target="_blank"></a> <div class="cart-card__image w-full h-[200px]! overflow-hidden"> <img src="/web/image/1713-09de8ff3/Coffee%20Menu%20·%20Enorganico%20·%20Portada.webp" class="image w-full h-full object-cover object-top overflow-hidden border-0 outline-0"> </div> <div class="carta-card__description p-[1rem]!"> <h2 class="text-xl!">Coffee Menu <br> Enorganico</h2> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 m-auto"> <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path> </svg> </div> </div> </div> <div class="col-12 col-md-4 gap-1 gap-md-0 text-center!"> <div class="carta-card relative hover:scale-105! shadow-md transition hover:shadow-lg rounded-2xl overflow-hidden"> <a href="/enorganico/assets/Food%20Menu%20%C2%B7%20Enorganico.DUFX-DFr.pdf" download class="absolute top-0 right-0 left-0 bottom-0 w-full h-full decoration-0" target="_blank"></a> <div class="cart-card__image w-full h-[200px]! overflow-hidden"> <img src="/web/image/1717-8b06b394/Food%20Menu%20·%20Enorganico.webp" class="image w-full h-full object-cover object-top overflow-hidden border-0 outline-0"> </div> <div class="carta-card__description p-[1rem]!"> <h2 class="text-xl!">Food Menu <br> Enorganico</h2> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 m-auto"> <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path> </svg> </div> </div> </div> <div class="col-12 col-md-4 gap-1 gap-md-0 text-center!"> <div class="carta-card relative hover:scale-105! shadow-md transition hover:shadow-lg rounded-2xl overflow-hidden"> <a href="/enorganico/assets/Matcha%20Menu%20%C2%B7%20Enorganico.BqFhB5io.pdf" download class="absolute top-0 right-0 left-0 bottom-0 w-full h-full decoration-0" target="_blank"></a> <div class="cart-card__image w-full h-[200px]! overflow-hidden"> <img src="/web/image/1716-7f491a75/Matcha%20Menu%20·%20Enorganico.webp" class="image w-full h-full object-cover object-top overflow-hidden border-0 outline-0"> </div> <div class="carta-card__description p-[1rem]!"> <h2 class="text-xl!">Matcha Menu <br> Enorganico</h2> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 m-auto"> <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path> </svg> </div> </div> </div> </div> </div> </section>  <!-- Green Sock animation platform --> <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> <!-- ScrollTrigger Plugin --> <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> <!-- CSS de Bootstrap --> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- JS de Bootstrap (con Popper incluido) --> <script type="module">window.location.hostname==="localhost"&&document.addEventListener("DOMContentLoaded",()=>{const o="https://enorganico.odoo.com";document.querySelectorAll('img[src^="/web/"], img[src^="/shop/"]').forEach(e=>{e.src=o+e.getAttribute("src")}),document.querySelectorAll('a[href^="/web/"], a[href^="/shop/"]').forEach(e=>{e.href=o+e.getAttribute("href")})});</script> <!-- Transformar rutas Odoo solo en desarrollo --> <script type="module" src="/enorganico/assets/Layout.astro_astro_type_script_index_1_lang.DfRauhE5.js"></script> </body> </html>
