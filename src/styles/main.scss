@@ -14,14 +14,17 @@
 
 // === Pages ===
 // Home
-@use 'pages/home/section-1';
-@use 'pages/home/section-2';
-@use 'pages/home/section-3';
-@use 'pages/home/section-4';
-@use 'pages/home/section-5';
-@use 'pages/home/section-6';
-@use 'pages/home/section-7';
-@use 'pages/home/section-8';
+@use 'pages/home/home-s1';
+@use 'pages/home/home-s2';
+@use 'pages/home/home-s3';
+@use 'pages/home/home-s4';
+@use 'pages/home/home-s5';
+@use 'pages/home/home-s6';
+@use 'pages/home/home-s7';
+@use 'pages/home/home-s8';
+// Menu
+@use 'pages/menu/menu-s1';
+
 
 // Themes
 @use "themes/enorganico";
