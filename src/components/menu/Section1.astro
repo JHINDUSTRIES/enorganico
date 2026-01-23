@@ -1,0 +1,100 @@
+---
+import ButtonGroup from "../../components/ui/ButtonGroup.astro";
+import Button from "../../components/ui/Button.astro";
+---
+
+<section id="enorganico-carta-hero" class="enorganico-carta-hero py-[5rem]! bg-white">
+  <div class="container-fluid">
+    <div class="row flex items-center">
+      <div class="col-12 offset-md-1 col-md-6 main-title">
+        <h1 class="text-6xl! font-black! uppercase w-75">
+          Tres cartas, una misma experiencia <br />
+          <span id="animated-word"> Enorganico </span>
+        </h1>
+        <p class="w-75">Explora nuestra selección de bebidas de café calientes y frías, creaciones a base de té matcha y una carta de panadería artesanal con croissants, waffles y más. Tres formas de disfrutar sabores naturales, frescos y pensados para cada momento del día.</p>
+        <ButtonGroup>
+          <Button variant="primary" text="Ver Cartas" icon="arrow-right" />
+          <Button variant="secondary" text="Comprar Ahora" icon="shopping-cart" iconPosition="left" />
+        </ButtonGroup>
+      </div>
+
+      <div class="col-12 offset-md-1 col-md-4 main-title">
+        <!-- Contenedor de imágenes -->
+        <div class="relative">
+          <!-- Imagen 1: Café -->
+          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100 flex items-center justify-between" data-slide="0">
+            <img src="https://enorganico.odoo.com/web/image/1683-bbe4311e/imagen-28.webp" alt="productos-cafe" class="w-[250px]! h-[250px]! object-cover object-center overflow-hidden" />
+          </div>
+
+          <!-- Imagen 2: Panadería -->
+          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 flex items-center justify-between" data-slide="1">
+            <img src="https://enorganico.odoo.com/web/image/1700-2a1541c6/imagen-2.webp" alt="productos-panaderia" class="w-[250px]! h-[250px]! object-cover object-center overflow-hidden" />
+          </div>
+
+          <!-- Imagen 3: Matcha -->
+          <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0 flex items-center justify-between" data-slide="2">
+            <img src="https://enorganico.odoo.com/web/image/1638-68575722/imagen-37.webp" alt="productos-matcha" class="w-[250px]! h-[250px]! object-cover object-center overflow-hidden" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    const animatedWord = document.getElementById("animated-word");
+
+    let currentSlide = 0;
+    let slideInterval;
+    const totalSlides = slides.length;
+    const slideDuration = 5000;
+
+    const colorClasses = ["text-(--enorganico-primary-color)!", "text-(--enorganico-secondary-color)!", "text-(--enorganico-menu-matcha)!"];
+
+    function animateTextLetters(colorClass) {
+      animatedWord.innerHTML = "";
+
+      const letters = "Enorganico".split("");
+
+      letters.forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+
+        span.className = `inline-block text-8xl! font-black! uppercase ${colorClass}`;
+        span.style.animation = "letterRise 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards";
+        span.style.animationDelay = `${index * 0.05}s`;
+        span.style.opacity = "0";
+
+        animatedWord.appendChild(span);
+      });
+    }
+
+    function goToSlide(slideIndex) {
+      if (slideIndex < 0 || slideIndex >= totalSlides) return;
+
+      slides[currentSlide].classList.remove("opacity-100");
+      slides[currentSlide].classList.add("opacity-0");
+
+      currentSlide = slideIndex;
+
+      slides[currentSlide].classList.remove("opacity-0");
+      slides[currentSlide].classList.add("opacity-100");
+
+      animateTextLetters(colorClasses[currentSlide]);
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % totalSlides;
+      goToSlide(nextIndex);
+    }
+
+    function startSlideInterval() {
+      slideInterval = setInterval(nextSlide, slideDuration);
+    }
+
+    goToSlide(0);
+    startSlideInterval();
+  });
+</script>

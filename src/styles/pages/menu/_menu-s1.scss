@@ -1,0 +1,51 @@
+/* Variables CSS con los colores que proporcionaste */
+:root {
+  --enorganico-menu-matcha: #59873b;
+}
+
+.enorganico-carta-hero {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 25%;
+    height: 100%;
+    background-color: var(--enorganico-primary-color);
+  }
+
+  .letter-animation span {
+    display: inline-block;
+    animation: letterRise 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  @keyframes letterRise {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Clases de color específicas */
+  .text-color-coffee {
+    color: var(--enorganico-menu-coffe) !important;
+  }
+
+  .text-color-matcha {
+    color: var(--enorganico-menu-matcha) !important;
+  }
+
+  .text-color-waffle {
+    color: var(--enorganico-menu-waffle) !important;
+  }
+}
