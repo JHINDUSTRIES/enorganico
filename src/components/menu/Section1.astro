@@ -6,8 +6,8 @@ import Button from "../../components/ui/Button.astro";
 <section id="enorganico-carta-hero" class="enorganico-carta-hero pt-[7rem]! pb-[5rem]! bg-white">
   <div class="container-fluid">
     <div class="row flex items-center">
-      <div class="col-12 offset-md-1 col-md-6 main-title">
-        <h1 class="text-6xl! font-black! uppercase w-75">
+      <div class="offset-1 col-11 offset-md-1 col-md-6 main-title">
+        <h1 class="text-3xl! md:text-6xl font-black! uppercase w-75">
           Tres cartas, una misma experiencia <br />
           <span id="animated-word"> Enorganico </span>
         </h1>
@@ -18,7 +18,7 @@ import Button from "../../components/ui/Button.astro";
         </ButtonGroup>
       </div>
 
-      <div class="col-12 offset-md-1 col-md-4 main-title">
+      <div class="d-none d-md-block offset-md-1 col-md-4 main-title">
         <!-- Contenedor de imágenes -->
         <div class="relative">
           <!-- Imagen 1: Café -->
@@ -62,7 +62,7 @@ import Button from "../../components/ui/Button.astro";
         const span = document.createElement("span");
         span.textContent = letter;
 
-        span.className = `inline-block text-8xl! font-black! uppercase ${colorClass}`;
+        span.className = `text-4xl! inline-block md:text-8xl! font-black! uppercase ${colorClass}`;
         span.style.animation = "letterRise 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards";
         span.style.animationDelay = `${index * 0.05}s`;
         span.style.opacity = "0";
