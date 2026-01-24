@@ -1,3 +1,6 @@
+@use "../../abstracts/mixins" as *;
+@use "../../abstracts/variables" as *;
+
 /* Variables CSS con los colores que proporcionaste */
 :root {
   --enorganico-menu-matcha: #59873b;
@@ -15,6 +18,10 @@
     width: 25%;
     height: 100%;
     background-color: var(--enorganico-primary-color);
+
+    @include mq("phone-l", max) {
+      background-color: var(--enorganico-low-accent-color);
+    }
   }
 
   .letter-animation span {
