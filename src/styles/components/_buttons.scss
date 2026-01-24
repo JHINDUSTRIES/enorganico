@@ -79,6 +79,7 @@ $button-icon-gap: 10px !default;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
+  margin-block: .5rem;
 
   // Estados
   &:disabled {
