@@ -1,0 +1,6 @@
+---
+// src/components/SVGIcon.astro
+const { iconName } = Astro.props;
+---
+
+{iconName && <span class="svg-icon-wrapper" set:html={iconName} />}
