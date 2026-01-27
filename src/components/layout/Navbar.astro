@@ -1,0 +1,95 @@
+---
+import Logo from "../../assets/brand/logo_enorganico_transparent.png";
+---
+
+<nav class="fixed flex items-center justify-between w-full border-0 z-10">
+  <div class="logo-container w-auto overflow-hidden">
+    <a href="/enorganico">
+      <img src={Logo.src} alt="logo" title="logo" class="h-[150px]! w-auto absolute top-8 left-10 pt-3 scale-125" />
+    </a>
+  </div>
+  <button command="show-modal" commandfor="drawer" class="px-2.5 py-1.5 text-sm font-semibold text-(--enorganico-primary-color)! hover:scale-125 p-10! transition-all transition-discrete">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"></path>
+    </svg>
+  </button>
+</nav>
+<el-dialog open>
+  <dialog id="drawer" aria-labelledby="drawer-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-hidden bg-transparent not-open:hidden backdrop:bg-transparent">
+    <el-dialog-backdrop class="absolute inset-0 bg-black/50 transition-opacity duration-500 ease-in-out data-closed:opacity-0"></el-dialog-backdrop>
+
+    <div tabindex="0" class="absolute inset-0 pl-10 focus:outline-none sm:pl-16">
+      <el-dialog-panel class="group/dialog-panel relative mr-auto block size-full max-w-md transform transition duration-500 ease-in-out data-closed:-translate-x-full sm:duration-700">
+        <div class="relative flex h-full flex-col overflow-y-auto bg-(--enorganico-primary-color) py-6 shadow-xl after:absolute after:inset-y-0 after:right-0 after:w-px after:bg-white/10">
+          <div class="relative mt-6 flex-1">
+            <div class="navbar-menu__body navbar-menu__body border-b border-black/20 pt-[5rem]! pb-[2rem]!">
+              <div class="relative px-3">
+                <input type="search" name="find-options" id="find-options" placeholder="Buscar..." class="w-full rounded-full bg-white placeholder-black/60 text-black px-5 py-3 pl-11 outline-none focus:ring-2 focus:ring-white/40" />
+                <svg class="w-5 h-5 absolute right-10 top-1/2 -translate-y-1/2 text-black/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-4.3-4.3m1.8-5.2a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="navbar-menu__body">
+              <div class="">
+                <ul class="text-white p-0 m-0">
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 bg-white/10 hover:ml-3! transition! font-semibold">Inicio</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Quienes Somos</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Franquicias</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Coffee Party</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Coffee Meeting</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="/enorganico/menu" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Carta</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Delivery</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Community</a>
+                  </li>
+                  <li class="border-b border-black/20">
+                    <a href="#" class="text-black block px-4 py-3 hover:bg-white/10 hover:ml-2! transition!">Tienda</a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="px-4 text-(--enorganico-secondary-color)/50! pb-2 pt-4 hover:bg-white/10 transition flex justify-start items-center no-underline!">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="ml-5!">+34 635 720 712</span>
+                    </a>
+                    <a href="#" class="px-4 text-(--enorganico-secondary-color)/50! pt-2 pb-4 hover:bg-white/10 transition flex justify-start items-center no-underline!">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"></path>
+                        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"></path>
+                      </svg>
+                      <span class="ml-5!">hola@enorganico.com</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-menu__foot"></div>
+          </div>
+        </div>
+
+        <div class="absolute top-0 -right-10 -mr-8 flex pt-4 pr-2 duration-500 ease-in-out group-data-closed/dialog-panel:opacity-0 sm:-ml-10 sm:pr-4">
+          <button type="button" command="close" commandfor="drawer" class="relative rounded-md text-gray-400 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+      </el-dialog-panel>
+    </div>
+  </dialog>
+</el-dialog>

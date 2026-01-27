@@ -10,6 +10,9 @@ import "../styles/global.css";
 import "@fontsource/montserrat/400.css";
 import "@fontsource/montserrat/700.css";
 import "@fontsource/montserrat/900.css";
+
+// Components
+import Header from "../components/layout/Navbar.astro";
 ---
 
 <!doctype html>
@@ -25,7 +28,13 @@ import "@fontsource/montserrat/900.css";
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet" />
   </head>
   <body class="overflow-x-hidden">
-    <slot />
+    <header id="enorganico-header" class="fixed top-0 left-0 right-0 w-full h-[75px] z-10 flex justify-end items-center">
+      <Header />
+    </header>
+
+    <main>
+      <slot />
+    </main>
 
     <!-- Green Sock animation platform -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -38,6 +47,9 @@ import "@fontsource/montserrat/900.css";
 
     <!-- JS de Bootstrap (con Popper incluido) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tailwindcss Plus for components -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 
     <!-- Transformar rutas Odoo solo en desarrollo -->
     <script>
